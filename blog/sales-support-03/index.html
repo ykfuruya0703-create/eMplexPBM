@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>紹介受注を仕組み化する―既存顧客ネットワークを可視化する営業支援の設計 | eMplex PBM コラム</title>
+<meta name="description" content="「良い紹介はいつも偶然」で片付けていませんか。紹介受注は運任せにせず、既存顧客との関係性データを可視化することで再現性のある営業チャネルに変えられます。具体的な設計の考え方を解説します。">
+<link rel="canonical" href="https://www.emplex-pbm.com/blog/sales-support-03/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="紹介受注を仕組み化する―既存顧客ネットワークを可視化する営業支援の設計">
+<meta property="og:description" content="「良い紹介はいつも偶然」で片付けていませんか。紹介受注は運任せにせず、既存顧客との関係性データを可視化することで再現性のある営業チャネルに変えられます。具体的な設計の考え方を解説します。">
+<meta property="og:url" content="https://www.emplex-pbm.com/blog/sales-support-03/">
+<meta property="og:site_name" content="eMplex PBM コラム">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="紹介受注を仕組み化する―既存顧客ネットワークを可視化する営業支援の設計">
+<meta name="twitter:description" content="「良い紹介はいつも偶然」で片付けていませんか。紹介受注は運任せにせず、既存顧客との関係性データを可視化することで再現性のある営業チャネルに変えられます。具体的な設計の考え方を解説します。">
+<style>
+:root{
+  --bg0:#060c14;--bg1:#0a1628;--bg2:#0f2040;
+  --accent:#00d4ff;--accent2:#0090ff;--accent3:#00e8b8;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;
+  --border:rgba(0,212,255,0.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Hiragino Sans','Yu Gothic UI','Noto Sans JP',sans-serif;background:var(--bg0);color:var(--text);line-height:1.85;}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:rgba(6,12,20,.9);position:sticky;top:0;backdrop-filter:blur(10px);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;color:#fff;text-decoration:none;letter-spacing:.5px;font-size:15px}
+.logo span{color:var(--accent)}
+nav a{color:var(--text2);text-decoration:none;font-size:13px;margin-left:18px}
+.breadcrumb{font-size:12px;color:var(--text3);margin:24px 0 8px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.tag-pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px;border:1px solid var(--border);color:var(--accent);background:rgba(0,212,255,.08)}
+.article-date{font-size:12px;color:var(--text3);font-family:monospace;margin-left:10px}
+h1{font-size:26px;font-weight:800;line-height:1.5;margin:14px 0 18px;color:#fff}
+.lead{font-size:15.5px;color:var(--text);background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:28px}
+article h2{font-size:19px;font-weight:700;color:#fff;margin:38px 0 14px;padding-left:12px;border-left:3px solid var(--accent)}
+article p{font-size:15px;color:var(--text2);margin-bottom:18px}
+.related{margin-top:48px;padding-top:28px;border-top:1px solid var(--border)}
+.related h3{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.related-list a{display:block;padding:12px 14px;margin-bottom:8px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:13.5px}
+.related-list a:hover{border-color:var(--accent)}
+.cta{margin-top:36px;padding:22px;text-align:center;border:1px solid var(--border);border-radius:14px;background:rgba(0,212,255,.05)}
+.cta a{color:var(--accent);text-decoration:none;font-weight:700;font-size:13.5px}
+footer{border-top:1px solid var(--border);margin-top:60px;padding:30px 0;text-align:center;color:var(--text3);font-size:12px}
+footer a{color:var(--text3)}
+.back{display:inline-block;margin:20px 0 0;color:var(--text2);text-decoration:none;font-size:13px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "紹介受注を仕組み化する―既存顧客ネットワークを可視化する営業支援の設計",
+  "description": "「良い紹介はいつも偶然」で片付けていませんか。紹介受注は運任せにせず、既存顧客との関係性データを可視化することで再現性のある営業チャネルに変えられます。具体的な設計の考え方を解説します。",
+  "datePublished": "2026-09-16",
+  "dateModified": "2026-09-16",
+  "author": {
+    "@type": "Person",
+    "name": "古谷幸治"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社プロジェクト・イノベーション",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.emplex-pbm.com/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.emplex-pbm.com/blog/sales-support-03/"
+  },
+  "articleSection": "営業支援"
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html">eMplex<span>PBM</span> コラム</a>
+    <nav><a href="../index.html">コラム一覧</a><a href="../../index.html#pricing">料金プラン</a></nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb"><a href="../../index.html">ホーム</a> / <a href="../index.html">コラム</a> / 紹介受注を仕組み化する―既存顧客ネットワークを可視化する営業支援の設計</div>
+  <article>
+    <div>
+      <span class="tag-pill">営業支援</span>
+      <span class="article-date">2026-09-16</span>
+    </div>
+    <h1>紹介受注を仕組み化する―既存顧客ネットワークを可視化する営業支援の設計</h1>
+    <div class="lead">「良い紹介はいつも偶然」で片付けていませんか。紹介受注は運任せにせず、既存顧客との関係性データを可視化することで再現性のある営業チャネルに変えられます。具体的な設計の考え方を解説します。</div>
+<h2>結論、紹介は「お願いする営業活動」ではなく「見える化する経営活動」</h2>
+<p>多くの会社では、紹介受注は担当営業の人柄や運に依存する属人的な活動として扱われています。しかし本質は、既存顧客との関係の深さやプロジェクトの満足度を継続的に可視化し、紹介が生まれやすい土壌を組織として育てていく経営活動です。個人の営業力に頼るのではなく、仕組みとして紹介を生み出す発想への転換が求められます。</p>
+<h2>なぜ紹介受注の実態は把握されていないのか</h2>
+<p>多くの会社が「紹介案件が多い」と感覚的には語りますが、実際にどの顧客からどれだけの紹介が生まれ、それがどれだけの受注につながったかを定量的に把握している会社は多くありません。理由は、紹介の発生源を案件データに紐づけて記録する運用が徹底されていないためです。この記録がなければ、紹介を生みやすい顧客の傾向や、紹介が生まれるタイミングの分析すら始められません。</p>
+<h2>プロジェクトの満足度が紹介の先行指標になる</h2>
+<p>紹介は、契約が完了した瞬間ではなく、プロジェクトの進行中から竣工後の対応にかけての満足度の積み重ねから生まれます。案件ごとの進捗報告の丁寧さや、竣工後のフォロー対応の質を数値化できる仕組みがあれば、どの案件が将来の紹介につながりやすいかをある程度予測できるようになります。満足度の高い案件を担当した営業や現場責任者を可視化することも、組織としての学びになります。</p>
+<h2>既存顧客ネットワークを名刺・案件履歴とつなげる</h2>
+<p>紹介を仕組み化する第一歩は、名刺交換で得た人脈情報と、過去のプロジェクト履歴を同じデータベース上でつなげることです。ある顧客担当者が転職した先で新たな案件を発注してくれるといった機会は、この二つの情報がつながっていて初めて見逃さずに拾えます。人脈情報とプロジェクト履歴が別々のツールで管理されている会社ほど、こうした機会損失に気づかないまま時間が過ぎていきます。</p>
+<h2>紹介依頼のタイミングを仕組みとして設計する</h2>
+<p>紹介は、担当者の勘で「そろそろお願いしてみよう」と依頼するものではなく、竣工後の満足度が高いタイミングや、契約更新の節目といった、依頼が自然に受け入れられやすい時期を仕組みとしてあらかじめ設計しておくことが有効です。私が200社を超える企業を支援してきた中でも、紹介依頼のタイミングをルール化している会社ほど、紹介受注の比率が安定して高い傾向がはっきりと見られました。</p>
+<h2>エンプレックス時代に見たCRMと紹介の関係</h2>
+<p>私がエンプレックスでCFOを務めていた時代、同社はITCRMソフトウェアを開発・販売する立場にありながら、自社の紹介案件の実態を十分にデータ化できていないという矛盾を抱えていました。顧客との関係データを一元管理する仕組みを整え、紹介の発生源を追跡できるようにしたところ、それまで感覚的にしか語られていなかった紹介受注の構造が初めて数字として見えるようになったことを、今でもよく覚えています。</p>
+<h2>まとめ</h2>
+<p>紹介受注は、偶然の産物として片付けるのではなく、既存顧客との関係性データを可視化することで、再現性のある営業チャネルへと育てることができます。満足度の記録、人脈と案件履歴のひもづけ、依頼タイミングの設計という3つの仕組みが、その土台になります。eMplex PBMのCRM/SFA機能は、名刺・取引先・プロジェクト履歴を一体で管理し、こうした紹介の構造を可視化する土台としてご活用いただけます。</p>
+  </article>
+  <div class="related"><h3>関連記事</h3><div class="related-list"><a href="../sales-support-01/index.html">CRM/SFAを名刺起点で回すメリット</a><a href="../sales-support-02/index.html">BtoB企業向けCRM導入と活用戦略</a><a href="../hr-management-06/index.html">構造的空隙：組織を強くする多方向ネットワーク</a></div></div>
+  <div class="cta">
+    <a href="../../index.html#pricing">eMplex PBM の無料相談・資料請求はこちら →</a>
+  </div>
+  <a class="back" href="../index.html">← コラム一覧に戻る</a>
+</div>
+<footer>
+  <div class="wrap">
+    &copy; 2026 株式会社プロジェクト・イノベーション / eMplex PBM
+  </div>
+</footer>
+</body>
+</html>

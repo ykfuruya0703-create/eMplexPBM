@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>収益認識会計基準におけるプロジェクト単位の管理手法 | eMplex PBM コラム</title>
+<meta name="description" content="2021年3月期から適用が始まった収益認識に関する会計基準は、多くのプロジェクト型ビジネスにとって「今まで通りのやり方が通用しない」という戸惑いをもたらしました。工事進行基準に慣れた建設業だけでなく、ソフトウェア開発やSI、コンサルティング…">
+<link rel="canonical" href="https://www.emplex-pbm.com/blog/cost-accounting-02/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="収益認識会計基準におけるプロジェクト単位の管理手法">
+<meta property="og:description" content="2021年3月期から適用が始まった収益認識に関する会計基準は、多くのプロジェクト型ビジネスにとって「今まで通りのやり方が通用しない」という戸惑いをもたらしました。工事進行基準に慣れた建設業だけでなく、ソフトウェア開発やSI、コンサルティング…">
+<meta property="og:url" content="https://www.emplex-pbm.com/blog/cost-accounting-02/">
+<meta property="og:site_name" content="eMplex PBM コラム">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="収益認識会計基準におけるプロジェクト単位の管理手法">
+<meta name="twitter:description" content="2021年3月期から適用が始まった収益認識に関する会計基準は、多くのプロジェクト型ビジネスにとって「今まで通りのやり方が通用しない」という戸惑いをもたらしました。工事進行基準に慣れた建設業だけでなく、ソフトウェア開発やSI、コンサルティング…">
+<style>
+:root{
+  --bg0:#060c14;--bg1:#0a1628;--bg2:#0f2040;
+  --accent:#00d4ff;--accent2:#0090ff;--accent3:#00e8b8;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;
+  --border:rgba(0,212,255,0.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Hiragino Sans','Yu Gothic UI','Noto Sans JP',sans-serif;background:var(--bg0);color:var(--text);line-height:1.85;}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:rgba(6,12,20,.9);position:sticky;top:0;backdrop-filter:blur(10px);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;color:#fff;text-decoration:none;letter-spacing:.5px;font-size:15px}
+.logo span{color:var(--accent)}
+nav a{color:var(--text2);text-decoration:none;font-size:13px;margin-left:18px}
+.breadcrumb{font-size:12px;color:var(--text3);margin:24px 0 8px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.tag-pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px;border:1px solid var(--border);color:var(--accent);background:rgba(0,212,255,.08)}
+.article-date{font-size:12px;color:var(--text3);font-family:monospace;margin-left:10px}
+h1{font-size:26px;font-weight:800;line-height:1.5;margin:14px 0 18px;color:#fff}
+.lead{font-size:15.5px;color:var(--text);background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:28px}
+article h2{font-size:19px;font-weight:700;color:#fff;margin:38px 0 14px;padding-left:12px;border-left:3px solid var(--accent)}
+article p{font-size:15px;color:var(--text2);margin-bottom:18px}
+.related{margin-top:48px;padding-top:28px;border-top:1px solid var(--border)}
+.related h3{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.related-list a{display:block;padding:12px 14px;margin-bottom:8px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:13.5px}
+.related-list a:hover{border-color:var(--accent)}
+.cta{margin-top:36px;padding:22px;text-align:center;border:1px solid var(--border);border-radius:14px;background:rgba(0,212,255,.05)}
+.cta a{color:var(--accent);text-decoration:none;font-weight:700;font-size:13.5px}
+footer{border-top:1px solid var(--border);margin-top:60px;padding:30px 0;text-align:center;color:var(--text3);font-size:12px}
+footer a{color:var(--text3)}
+.back{display:inline-block;margin:20px 0 0;color:var(--text2);text-decoration:none;font-size:13px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "収益認識会計基準におけるプロジェクト単位の管理手法",
+  "description": "2021年3月期から適用が始まった収益認識に関する会計基準は、多くのプロジェクト型ビジネスにとって「今まで通りのやり方が通用しない」という戸惑いをもたらしました。工事進行基準に慣れた建設業だけでなく、ソフトウェア開発やSI、コンサルティング…",
+  "datePublished": "2026-03-11",
+  "dateModified": "2026-03-11",
+  "author": {
+    "@type": "Person",
+    "name": "古谷幸治"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社プロジェクト・イノベーション",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.emplex-pbm.com/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.emplex-pbm.com/blog/cost-accounting-02/"
+  },
+  "articleSection": "原価計算実務"
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html">eMplex<span>PBM</span> コラム</a>
+    <nav><a href="../index.html">コラム一覧</a><a href="../../index.html#pricing">料金プラン</a></nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb"><a href="../../index.html">ホーム</a> / <a href="../index.html">コラム</a> / 収益認識会計基準におけるプロジェクト単位の管理手法</div>
+  <article>
+    <div>
+      <span class="tag-pill">原価計算実務</span>
+      <span class="article-date">2026-03-11</span>
+    </div>
+    <h1>収益認識会計基準におけるプロジェクト単位の管理手法</h1>
+    <div class="lead">2021年3月期から適用が始まった収益認識に関する会計基準は、多くのプロジェクト型ビジネスにとって「今まで通りのやり方が通用しない」という戸惑いをもたらしました。工事進行基準に慣れた建設業だけでなく、ソフトウェア開発やSI、コンサルティングなど幅広い業種が、履行義務の識別や進捗度の見積りという新しい概念に向き合う必要に迫られています。しかし基準の本質は、プロジェクト単位で収益と原価を対応させるという、もともと現場が大切にしてきた考え方の延長線上にあります。本記事では、収益認識会計基準をプロジェクト管理の実務にどう落とし込むかを整理します。</div>
+<h2>収益認識会計基準がプロジェクト型ビジネスにもたらした変化</h2>
+<p>結論として、収益認識会計基準の導入により、収益をいつ・いくら計上するかの判断が、契約単位ではなく「履行義務」という単位に置き換わりました。これまでは工事契約や請負契約ごとに一括して収益を認識する実務が多く見られましたが、新基準では一つの契約の中に複数の履行義務が含まれる場合、それぞれを識別して個別に収益を認識することが求められます。システム開発とその後の保守運用がセットになった契約では、開発部分と保守部分を別々の履行義務として扱い、進捗や期間に応じて収益を按分する必要があります。この変化は会計処理の手間を増やす一方で、プロジェクトごとの実態をより正確に映し出す機会でもあります。</p>
+<h2>履行義務の識別とプロジェクト単位の管理をどう対応させるか</h2>
+<p>結論として、履行義務の単位とプロジェクト管理上の管理単位は、必ずしも一致させる必要はありませんが、対応関係を明確にしておかないと収益と原価の対応がずれてしまいます。プロジェクト管理会計では案件ごとに予算・実績・見通しを追いますが、会計上は一つの案件が複数の履行義務に分解されることがあるためです。要件定義、開発、導入支援という三つの履行義務が含まれる場合、それぞれの進捗度と原価発生状況を紐づけて管理しなければ、どの工程で採算が悪化しているかが見えなくなります。プロジェクトコードの下に履行義務単位のサブコードを設けるなど、管理粒度を会計基準に合わせて設計することが重要です。</p>
+<h2>一定の期間にわたり充足される履行義務と進捗度の見積り</h2>
+<p>結論として、多くのプロジェクト型ビジネスでは、履行義務が一定の期間にわたり充足されると判定され、進捗度に応じて収益を認識します。顧客が便益を享受しながら履行が進む請負契約や受託開発では、完成時に一括して収益を計上するのではなく、原価比例法などのインプット法で進捗を見積もる必要があるためです。見積総原価に対する発生原価の割合で進捗度を算定しますが、見積総原価の精度が低いと収益認識そのものが不安定になります。進捗度の見積り精度を高めるには、プロジェクト単位での原価実績のタイムリーな把握が欠かせません。</p>
+<h2>変動対価と契約変更がプロジェクト管理に与える影響</h2>
+<p>結論として、値引きやリベート、成果報酬といった変動対価や、追加発注による契約変更は、プロジェクトの収益計画そのものを揺さぶる要因になります。収益認識会計基準では変動対価を合理的に見積り、収益に反映することが求められますが、これはプロジェクト側の受注管理・変更管理と密接に関わっています。当初の請負金額に加えて追加開発分の契約変更が発生した場合、それを別個の履行義務として扱うか、既存の履行義務の変更として扱うかで収益の認識時期が変わり、月次のプロジェクト損益にも影響します。契約変更が発生した時点で会計処理の方針を即座に確認できる体制が不可欠です。</p>
+<h2>実務でつまずきやすいポイント——見積りの主観性</h2>
+<p>結論として、収益認識会計基準の運用で最も難しいのは、進捗度や変動対価の見積りに一定の主観が入り込むことです。見積総原価や工事進捗率は現場責任者の感覚に依存しやすく、プロジェクトごとにばらつきが生じやすいためです。同じような規模の開発案件でも、担当するプロジェクトマネージャーによって見積総原価の算定根拠が異なり、結果として進捗率にも数パーセントの差が出ることがあります。見積りの根拠を標準化し、原価実績データに基づいて定期的に見直すプロセスを組み込むことで、恣意性を抑えることができます。</p>
+<h2>実体験——朋友建設での工事進行基準と数字が合わない日々</h2>
+<p>私が社会人としてのキャリアをスタートさせた朋友建設では、工事進行基準による収益認識が当たり前でしたが、入社2年後に会社が和議(民事再生)を経験し、見積総原価の甘さがそのまま損失として顕在化する現場を目の当たりにしました。進捗度を実態より高く見積もっていたプロジェクトほど、後から損失が一気に表面化するという構図です。この経験があったからこそ、収益認識は単なる会計処理ではなく、プロジェクトの実態を正直に映す仕組みでなければならないという確信を持つようになりました。</p>
+<h2>eMplex PBMによる収益認識対応の実務</h2>
+<p>結論として、収益認識会計基準への対応は、プロジェクト管理システムの中に進捗度と原価実績をリアルタイムで連動させる仕組みを組み込むことで、実務負荷を大きく下げられます。手作業でExcelを使って進捗率と収益計上額を計算していると、月次決算のたびに時間がかかるうえ、見積りの見直しが後手に回りがちだからです。eMplex PBMでは、プロジェクトごとの発生原価と見積総原価を常時更新し、原価比例法による進捗度と収益計上額の目安を自動的に算出できるようにしています。会計基準への対応とプロジェクトの採算管理を同じデータ基盤で行うことが、実務効率と正確性の両立につながります。</p>
+<h2>まとめ</h2>
+<p>収益認識会計基準は、突き詰めれば「プロジェクトの実態を、いつ、どれだけ正直に数字へ映すか」という問いに答えるための仕組みです。見積りの精度や履行義務の識別に手間はかかりますが、それはプロジェクト管理そのものの精度を高める作業でもあります。収益は認識するものではなく、プロジェクトの実態が映し出すものだ、と捉える視点を持ちたいものです。</p>
+  </article>
+  <div class="related"><h3>関連記事</h3><div class="related-list"><a href="../cost-accounting-03/index.html">プロジェクト別原価計算における特別損失の分類と処理方式</a><a href="../cost-accounting-07/index.html">月次決算における人件費と未払費用の計上実務</a></div></div>
+  <div class="cta">
+    <a href="../../index.html#pricing">eMplex PBM の無料相談・資料請求はこちら →</a>
+  </div>
+  <a class="back" href="../index.html">← コラム一覧に戻る</a>
+</div>
+<footer>
+  <div class="wrap">
+    &copy; 2026 株式会社プロジェクト・イノベーション / eMplex PBM
+  </div>
+</footer>
+</body>
+</html>

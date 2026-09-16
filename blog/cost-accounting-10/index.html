@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プロジェクト原価計算と予定賃率の仕組み | eMplex PBM コラム</title>
+<meta name="description" content="「担当者の実際の給与を案件ごとに割り振ればいいのでは」と考える方は多いのですが、実務でこれをやろうとすると、給与情報という機微な情報が現場のプロジェクトマネージャーにまで見えてしまう、あるいは賞与や社会保険料の反映タイミングで月ごとに単価が…">
+<link rel="canonical" href="https://www.emplex-pbm.com/blog/cost-accounting-10/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="プロジェクト原価計算と予定賃率の仕組み">
+<meta property="og:description" content="「担当者の実際の給与を案件ごとに割り振ればいいのでは」と考える方は多いのですが、実務でこれをやろうとすると、給与情報という機微な情報が現場のプロジェクトマネージャーにまで見えてしまう、あるいは賞与や社会保険料の反映タイミングで月ごとに単価が…">
+<meta property="og:url" content="https://www.emplex-pbm.com/blog/cost-accounting-10/">
+<meta property="og:site_name" content="eMplex PBM コラム">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="プロジェクト原価計算と予定賃率の仕組み">
+<meta name="twitter:description" content="「担当者の実際の給与を案件ごとに割り振ればいいのでは」と考える方は多いのですが、実務でこれをやろうとすると、給与情報という機微な情報が現場のプロジェクトマネージャーにまで見えてしまう、あるいは賞与や社会保険料の反映タイミングで月ごとに単価が…">
+<style>
+:root{
+  --bg0:#060c14;--bg1:#0a1628;--bg2:#0f2040;
+  --accent:#00d4ff;--accent2:#0090ff;--accent3:#00e8b8;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;
+  --border:rgba(0,212,255,0.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Hiragino Sans','Yu Gothic UI','Noto Sans JP',sans-serif;background:var(--bg0);color:var(--text);line-height:1.85;}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:rgba(6,12,20,.9);position:sticky;top:0;backdrop-filter:blur(10px);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;color:#fff;text-decoration:none;letter-spacing:.5px;font-size:15px}
+.logo span{color:var(--accent)}
+nav a{color:var(--text2);text-decoration:none;font-size:13px;margin-left:18px}
+.breadcrumb{font-size:12px;color:var(--text3);margin:24px 0 8px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.tag-pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px;border:1px solid var(--border);color:var(--accent);background:rgba(0,212,255,.08)}
+.article-date{font-size:12px;color:var(--text3);font-family:monospace;margin-left:10px}
+h1{font-size:26px;font-weight:800;line-height:1.5;margin:14px 0 18px;color:#fff}
+.lead{font-size:15.5px;color:var(--text);background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:28px}
+article h2{font-size:19px;font-weight:700;color:#fff;margin:38px 0 14px;padding-left:12px;border-left:3px solid var(--accent)}
+article p{font-size:15px;color:var(--text2);margin-bottom:18px}
+.related{margin-top:48px;padding-top:28px;border-top:1px solid var(--border)}
+.related h3{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.related-list a{display:block;padding:12px 14px;margin-bottom:8px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:13.5px}
+.related-list a:hover{border-color:var(--accent)}
+.cta{margin-top:36px;padding:22px;text-align:center;border:1px solid var(--border);border-radius:14px;background:rgba(0,212,255,.05)}
+.cta a{color:var(--accent);text-decoration:none;font-weight:700;font-size:13.5px}
+footer{border-top:1px solid var(--border);margin-top:60px;padding:30px 0;text-align:center;color:var(--text3);font-size:12px}
+footer a{color:var(--text3)}
+.back{display:inline-block;margin:20px 0 0;color:var(--text2);text-decoration:none;font-size:13px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "プロジェクト原価計算と予定賃率の仕組み",
+  "description": "「担当者の実際の給与を案件ごとに割り振ればいいのでは」と考える方は多いのですが、実務でこれをやろうとすると、給与情報という機微な情報が現場のプロジェクトマネージャーにまで見えてしまう、あるいは賞与や社会保険料の反映タイミングで月ごとに単価が…",
+  "datePublished": "2026-02-20",
+  "dateModified": "2026-02-20",
+  "author": {
+    "@type": "Person",
+    "name": "古谷幸治"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社プロジェクト・イノベーション",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.emplex-pbm.com/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.emplex-pbm.com/blog/cost-accounting-10/"
+  },
+  "articleSection": "原価計算実務"
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html">eMplex<span>PBM</span> コラム</a>
+    <nav><a href="../index.html">コラム一覧</a><a href="../../index.html#pricing">料金プラン</a></nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb"><a href="../../index.html">ホーム</a> / <a href="../index.html">コラム</a> / プロジェクト原価計算と予定賃率の仕組み</div>
+  <article>
+    <div>
+      <span class="tag-pill">原価計算実務</span>
+      <span class="article-date">2026-02-20</span>
+    </div>
+    <h1>プロジェクト原価計算と予定賃率の仕組み</h1>
+    <div class="lead">「担当者の実際の給与を案件ごとに割り振ればいいのでは」と考える方は多いのですが、実務でこれをやろうとすると、給与情報という機微な情報が現場のプロジェクトマネージャーにまで見えてしまう、あるいは賞与や社会保険料の反映タイミングで月ごとに単価が大きくぶれるといった問題にぶつかります。そこで実務上よく使われるのが「予定賃率」という考え方です。この記事では、予定賃率とは何か、どのように設定し、どう運用すれば案件別採算の精度を保ちながら現場の負担も抑えられるのかを、具体例とともに解説していきます。</div>
+<h2>予定賃率とは何かを正しく理解する</h2>
+<p>予定賃率とは、社員一人あたりの人件費を、実際の給与そのものではなく、あらかじめ設定した一定の単価として扱う考え方です。等級や職種ごとに「時間あたりいくら」という単価を年度初めに決めておき、その単価と実際の工数を掛け合わせることで、プロジェクトごとの労務費を算出します。実際の給与額を都度参照する必要がなくなるため、現場での運用がシンプルになり、かつ機微な給与情報を必要以上に開示せずに済むという副次的なメリットも生まれます。多くの会社が採用する理由はここにあります。</p>
+<h2>実際賃率ではなく予定賃率を使う理由</h2>
+<p>実際の給与額をそのまま案件原価に反映させようとすると、賞与支給月だけ極端に原価が跳ね上がったり、昇給のタイミングで前月と当月の同じ案件の採算が不自然に変動したりします。これでは案件そのものの採算性を正しく評価できません。予定賃率を使えば、こうした季節要因や制度要因によるノイズを排除し、純粋に「その案件にどれだけの工数が投入されたか」という観点で採算を評価できます。年間を通じて一定の単価を使うことで、案件間の比較可能性も担保されます。</p>
+<h2>予定賃率の設定方法と見直しのタイミング</h2>
+<p>予定賃率は一般に、対象となる等級・職種のメンバーの年間人件費見込み総額を、年間の標準稼働時間で割ることで算出します。ここでの人件費には基本給だけでなく賞与や法定福利費も含めるのが望ましく、含めないと後で大きな賃率差異が発生します。設定した予定賃率は、原則として期首に一度決め、期中は原則として変更しません。ただし昇給や組織変更が大きい場合は、期の途中であっても実態と乖離が大きくなりすぎる前に見直す判断が必要になります。</p>
+<h2>賃率差異をどう会計処理し、どう活用するか</h2>
+<p>予定賃率を使うと、実際の人件費総額と、予定賃率で計算した労務費の合計との間に必ず差異が生じます。これを賃率差異と呼び、多くの場合は期末に一括して売上原価に賦課するか、あるいは各案件に案分して調整します。重要なのは、この差異を単なる決算整理仕訳として片付けるのではなく、差異の大きさを経営指標として毎期観察することです。差異が拡大している場合は、稼働時間の見積もりが実態と乖離してきているサインであり、賃率の見直し時期が近づいていることを示しています。</p>
+<h2>エンプレックスCFO時代にeMplex PBMの原型を作った経緯</h2>
+<p>私は2002年にエンプレックスの取締役CFOに就任し、経営管理・経営企画・上場準備のすべてに携わる中で、社員一人ひとりの実際給与を都度参照するのではなく、等級別の予定賃率とタイムシートの工数データを掛け合わせてプロジェクト別損益をリアルタイムに可視化する仕組みを構築しました。これがプロジェクトバジェット・マネジメントシステム「eMplex PBM」の原型です。給与情報を現場に開示せずに済むという実務上のメリットが、社内での運用定着を後押ししたことをよく覚えています。</p>
+<h2>職種・等級ごとに賃率を分ける粒度の設計</h2>
+<p>予定賃率をどこまで細かく分けるかは、精度と運用負荷のトレードオフです。全社一律の単一賃率では、経験豊富なシニアと若手の工数が同じ重みで扱われてしまい、案件採算の実態を見誤ります。かといって個人ごとに賃率を分けてしまうと、実質的に実際給与に近づき、予定賃率のメリットが薄れます。多くの現場でうまくいっているのは、職種と等級を掛け合わせて数段階から十数段階程度のグループに分ける方法で、精度と運用のしやすさのバランスが取れています。</p>
+<h2>外注費との比較で予定賃率が果たす役割</h2>
+<p>予定賃率は社内工数の原価化だけでなく、内製と外注のどちらが有利かを判断する物差しとしても機能します。ある工程を外注した場合の見積金額と、自社の予定賃率で計算した内製コストを比較することで、価格だけでなく品質やスケジュールも含めた総合的な意思決定がしやすくなります。この比較軸を持たずに感覚だけで内製・外注を決めている会社は少なくありませんが、予定賃率という共通の物差しがあるだけで、議論の質が大きく変わります。</p>
+<h2>まとめ</h2>
+<p>予定賃率は、実際の給与という生々しい数字を、案件同士の比較が可能な冷静な物差しへと変換するための仕組みです。給与そのものを追いかけるのではなく、あらかじめ決めた単価と実際の工数を掛け合わせるというシンプルな設計が、機微情報の保護と採算管理の精度という、一見両立しにくい二つの要請を同時に満たします。原価計算における単価とは、突き詰めた正確さを追い求めるものではなく、案件間の比較可能性を静かに育てるためのものだと言えるでしょう。</p>
+  </article>
+  <div class="related"><h3>関連記事</h3><div class="related-list"><a href="../timesheet-03/index.html">プロジェクト別原価計算における工数管理の実務</a><a href="../cost-accounting-09/index.html">プロジェクト別原価計算の会計実務</a></div></div>
+  <div class="cta">
+    <a href="../../index.html#pricing">eMplex PBM の無料相談・資料請求はこちら →</a>
+  </div>
+  <a class="back" href="../index.html">← コラム一覧に戻る</a>
+</div>
+<footer>
+  <div class="wrap">
+    &copy; 2026 株式会社プロジェクト・イノベーション / eMplex PBM
+  </div>
+</footer>
+</body>
+</html>

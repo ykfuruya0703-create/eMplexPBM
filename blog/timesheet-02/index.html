@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プロジェクト管理会計における作業日報の承認手続と内部統制の仕組み | eMplex PBM コラム</title>
+<meta name="description" content="プロジェクトの原価を正確に把握するための出発点は、実は日々の作業日報にあります。しかし多くの現場では、作業日報が「後から辻褄を合わせて入力するもの」になってしまい、承認手続も形だけのものになりがちです。工数データが不正確なまま人件費を原価に…">
+<link rel="canonical" href="https://www.emplex-pbm.com/blog/timesheet-02/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="プロジェクト管理会計における作業日報の承認手続と内部統制の仕組み">
+<meta property="og:description" content="プロジェクトの原価を正確に把握するための出発点は、実は日々の作業日報にあります。しかし多くの現場では、作業日報が「後から辻褄を合わせて入力するもの」になってしまい、承認手続も形だけのものになりがちです。工数データが不正確なまま人件費を原価に…">
+<meta property="og:url" content="https://www.emplex-pbm.com/blog/timesheet-02/">
+<meta property="og:site_name" content="eMplex PBM コラム">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="プロジェクト管理会計における作業日報の承認手続と内部統制の仕組み">
+<meta name="twitter:description" content="プロジェクトの原価を正確に把握するための出発点は、実は日々の作業日報にあります。しかし多くの現場では、作業日報が「後から辻褄を合わせて入力するもの」になってしまい、承認手続も形だけのものになりがちです。工数データが不正確なまま人件費を原価に…">
+<style>
+:root{
+  --bg0:#060c14;--bg1:#0a1628;--bg2:#0f2040;
+  --accent:#00d4ff;--accent2:#0090ff;--accent3:#00e8b8;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;
+  --border:rgba(0,212,255,0.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Hiragino Sans','Yu Gothic UI','Noto Sans JP',sans-serif;background:var(--bg0);color:var(--text);line-height:1.85;}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:rgba(6,12,20,.9);position:sticky;top:0;backdrop-filter:blur(10px);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;color:#fff;text-decoration:none;letter-spacing:.5px;font-size:15px}
+.logo span{color:var(--accent)}
+nav a{color:var(--text2);text-decoration:none;font-size:13px;margin-left:18px}
+.breadcrumb{font-size:12px;color:var(--text3);margin:24px 0 8px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.tag-pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px;border:1px solid var(--border);color:var(--accent);background:rgba(0,212,255,.08)}
+.article-date{font-size:12px;color:var(--text3);font-family:monospace;margin-left:10px}
+h1{font-size:26px;font-weight:800;line-height:1.5;margin:14px 0 18px;color:#fff}
+.lead{font-size:15.5px;color:var(--text);background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:28px}
+article h2{font-size:19px;font-weight:700;color:#fff;margin:38px 0 14px;padding-left:12px;border-left:3px solid var(--accent)}
+article p{font-size:15px;color:var(--text2);margin-bottom:18px}
+.related{margin-top:48px;padding-top:28px;border-top:1px solid var(--border)}
+.related h3{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.related-list a{display:block;padding:12px 14px;margin-bottom:8px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:13.5px}
+.related-list a:hover{border-color:var(--accent)}
+.cta{margin-top:36px;padding:22px;text-align:center;border:1px solid var(--border);border-radius:14px;background:rgba(0,212,255,.05)}
+.cta a{color:var(--accent);text-decoration:none;font-weight:700;font-size:13.5px}
+footer{border-top:1px solid var(--border);margin-top:60px;padding:30px 0;text-align:center;color:var(--text3);font-size:12px}
+footer a{color:var(--text3)}
+.back{display:inline-block;margin:20px 0 0;color:var(--text2);text-decoration:none;font-size:13px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "プロジェクト管理会計における作業日報の承認手続と内部統制の仕組み",
+  "description": "プロジェクトの原価を正確に把握するための出発点は、実は日々の作業日報にあります。しかし多くの現場では、作業日報が「後から辻褄を合わせて入力するもの」になってしまい、承認手続も形だけのものになりがちです。工数データが不正確なまま人件費を原価に…",
+  "datePublished": "2026-03-02",
+  "dateModified": "2026-03-02",
+  "author": {
+    "@type": "Person",
+    "name": "古谷幸治"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社プロジェクト・イノベーション",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.emplex-pbm.com/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.emplex-pbm.com/blog/timesheet-02/"
+  },
+  "articleSection": "タイムシート"
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html">eMplex<span>PBM</span> コラム</a>
+    <nav><a href="../index.html">コラム一覧</a><a href="../../index.html#pricing">料金プラン</a></nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb"><a href="../../index.html">ホーム</a> / <a href="../index.html">コラム</a> / プロジェクト管理会計における作業日報の承認手続と内部統制の仕組み</div>
+  <article>
+    <div>
+      <span class="tag-pill">タイムシート</span>
+      <span class="article-date">2026-03-02</span>
+    </div>
+    <h1>プロジェクト管理会計における作業日報の承認手続と内部統制の仕組み</h1>
+    <div class="lead">プロジェクトの原価を正確に把握するための出発点は、実は日々の作業日報にあります。しかし多くの現場では、作業日報が「後から辻褄を合わせて入力するもの」になってしまい、承認手続も形だけのものになりがちです。工数データが不正確なまま人件費を原価に配賦していては、どれだけ精緻な原価計算の仕組みを整えても意味がありません。本記事では、プロジェクト管理会計における作業日報の役割と、それを機能させるための承認手続と内部統制の設計について解説します。</div>
+<h2>なぜ作業日報がプロジェクト管理会計の出発点なのか</h2>
+<p>結論として、作業日報は、人件費というプロジェクト原価の中で最も大きな比重を占める項目を、正確にプロジェクトへ配賦するための基礎データです。多くのプロジェクト型ビジネスでは人件費が原価全体の過半を占めており、工数の記録が不正確であれば、どれほど精緻な配賦計算式を用意しても原価は正しく算定できないためです。あるシステム開発会社では、エンジニアが複数プロジェクトを掛け持ちしていたにもかかわらず、月末にまとめて工数を按分入力していたため、実際に工数を多く使ったプロジェクトの原価が過小に計上されていました。日々のリアルタイムな入力習慣こそが、プロジェクト原価計算の精度を左右する最も基本的な要素です。</p>
+<h2>作業日報が形骸化する典型的なパターン</h2>
+<p>結論として、作業日報が形骸化する最大の原因は、入力が「事後報告」になっていることです。リアルタイムで入力する習慣がないと、記憶をもとに月末にまとめて入力することになり、実際の工数配分とかけ離れた数字になりやすいためです。繁忙期に稼働したプロジェクトの工数を少なめに申告し、逆に手が空いていた期間の工数を多めに埋めるといった、無意識の記憶の歪みが積み重なるケースをよく見かけます。入力のタイミングを日次に近づけることが、形骸化を防ぐ最も効果的な対策です。</p>
+<h2>承認手続の設計——誰が、いつ、何を確認するのか</h2>
+<p>結論として、作業日報の承認手続は、上長による内容確認だけでなく、プロジェクトマネージャーによる工数妥当性の確認という二段階で設計することが望ましいといえます。上長は勤怠管理の観点から承認しますが、その工数がどのプロジェクトにどれだけ使われたかという妥当性は、プロジェクトの実態を把握しているマネージャーでなければ判断できないためです。週次で本人が入力し、翌週初にプロジェクトマネージャーが工数配分の妥当性を確認、月末に上長が最終承認するという三段階のフローを導入することで、入力の遅延と配分の誤りを同時に防げます。承認者の役割を分けることが、内部統制としての実効性を高めます。</p>
+<h2>内部統制の観点から見た作業日報の重要性</h2>
+<p>結論として、作業日報は単なる工数管理のツールではなく、原価の恣意的な操作を防ぐ内部統制の一部として機能します。プロジェクトごとの人件費原価が正確に記録されていなければ、原価の付け替えによる利益操作の余地が生まれてしまうためです。上場準備の過程では、監査人からプロジェクト別の工数按分の根拠について厳しく確認を受けることが一般的で、承認履歴が残っていない工数データは証跡として認められないことがあります。承認手続の履歴をシステム上に残しておくことが、内部統制の観点からも極めて重要です。</p>
+<h2>実体験——エンプレックス上場準備で直面した工数管理の壁</h2>
+<p>私がエンプレックスでCFOとして上場準備に携わっていた際、監査法人から最初に指摘を受けたのが、プロジェクトごとの工数按分の根拠が曖昧だという点でした。当時はExcelでの手入力管理が中心で、承認履歴も紙のハンコで残す運用だったため、証跡としての信頼性に限界がありました。この経験がきっかけとなり、工数を日次で入力し、承認履歴をシステム上に残す仕組みの必要性を痛感し、後にプロジェクトバジェット・マネジメントシステムの構想へとつながっていきました。</p>
+<h2>eMplex PBMのタイムシート機能による統制の実装</h2>
+<p>結論として、タイムシート機能をプロジェクト管理システムに統合することで、工数入力から承認までの一連のプロセスを証跡として残すことができます。入力・承認の履歴がシステムに残っていれば、後から監査や内部統制の確認を受けた際にも、根拠を即座に提示できるためです。eMplex PBMのタイムシート機能では、日次での工数入力を促すリマインド機能と、プロジェクトマネージャー・上長による多段階承認のワークフローを標準搭載し、承認漏れや入力遅延を可視化しています。入力の習慣化と承認の証跡化を同時に実現する仕組みが、プロジェクト管理会計の信頼性を支えます。</p>
+<h2>まとめ</h2>
+<p>作業日報は地味な業務に見えて、プロジェクト管理会計の土台そのものです。承認手続を形だけのものにせず、実効性のある内部統制として機能させることが、正確な原価計算への一番の近道になります。工数は記録するものではなく、プロジェクトの実態を語る証言だと考えると、日々の入力の重みが変わってくるはずです。</p>
+  </article>
+  <div class="related"><h3>関連記事</h3><div class="related-list"><a href="../cost-accounting-05/index.html">プロジェクト管理会計における直接人件費と間接人件費の計算実務</a><a href="../cost-accounting-07/index.html">月次決算における人件費と未払費用の計上実務</a></div></div>
+  <div class="cta">
+    <a href="../../index.html#pricing">eMplex PBM の無料相談・資料請求はこちら →</a>
+  </div>
+  <a class="back" href="../index.html">← コラム一覧に戻る</a>
+</div>
+<footer>
+  <div class="wrap">
+    &copy; 2026 株式会社プロジェクト・イノベーション / eMplex PBM
+  </div>
+</footer>
+</body>
+</html>

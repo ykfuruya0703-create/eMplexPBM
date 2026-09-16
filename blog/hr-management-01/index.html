@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>タレントマネジメントとプロジェクト収支の連動 | eMplex PBM コラム</title>
+<meta name="description" content="人事評価とプロジェクトの収支データを切り離して管理していないでしょうか。両者を連動させることで見えてくる、次世代の人材マネジメントのあり方を紹介します。">
+<link rel="canonical" href="https://www.emplex-pbm.com/blog/hr-management-01/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="タレントマネジメントとプロジェクト収支の連動">
+<meta property="og:description" content="人事評価とプロジェクトの収支データを切り離して管理していないでしょうか。両者を連動させることで見えてくる、次世代の人材マネジメントのあり方を紹介します。">
+<meta property="og:url" content="https://www.emplex-pbm.com/blog/hr-management-01/">
+<meta property="og:site_name" content="eMplex PBM コラム">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="タレントマネジメントとプロジェクト収支の連動">
+<meta name="twitter:description" content="人事評価とプロジェクトの収支データを切り離して管理していないでしょうか。両者を連動させることで見えてくる、次世代の人材マネジメントのあり方を紹介します。">
+<style>
+:root{
+  --bg0:#060c14;--bg1:#0a1628;--bg2:#0f2040;
+  --accent:#00d4ff;--accent2:#0090ff;--accent3:#00e8b8;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;
+  --border:rgba(0,212,255,0.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Hiragino Sans','Yu Gothic UI','Noto Sans JP',sans-serif;background:var(--bg0);color:var(--text);line-height:1.85;}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:rgba(6,12,20,.9);position:sticky;top:0;backdrop-filter:blur(10px);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;color:#fff;text-decoration:none;letter-spacing:.5px;font-size:15px}
+.logo span{color:var(--accent)}
+nav a{color:var(--text2);text-decoration:none;font-size:13px;margin-left:18px}
+.breadcrumb{font-size:12px;color:var(--text3);margin:24px 0 8px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.tag-pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px;border:1px solid var(--border);color:var(--accent);background:rgba(0,212,255,.08)}
+.article-date{font-size:12px;color:var(--text3);font-family:monospace;margin-left:10px}
+h1{font-size:26px;font-weight:800;line-height:1.5;margin:14px 0 18px;color:#fff}
+.lead{font-size:15.5px;color:var(--text);background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:28px}
+article h2{font-size:19px;font-weight:700;color:#fff;margin:38px 0 14px;padding-left:12px;border-left:3px solid var(--accent)}
+article p{font-size:15px;color:var(--text2);margin-bottom:18px}
+.related{margin-top:48px;padding-top:28px;border-top:1px solid var(--border)}
+.related h3{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.related-list a{display:block;padding:12px 14px;margin-bottom:8px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:13.5px}
+.related-list a:hover{border-color:var(--accent)}
+.cta{margin-top:36px;padding:22px;text-align:center;border:1px solid var(--border);border-radius:14px;background:rgba(0,212,255,.05)}
+.cta a{color:var(--accent);text-decoration:none;font-weight:700;font-size:13.5px}
+footer{border-top:1px solid var(--border);margin-top:60px;padding:30px 0;text-align:center;color:var(--text3);font-size:12px}
+footer a{color:var(--text3)}
+.back{display:inline-block;margin:20px 0 0;color:var(--text2);text-decoration:none;font-size:13px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "タレントマネジメントとプロジェクト収支の連動",
+  "description": "人事評価とプロジェクトの収支データを切り離して管理していないでしょうか。両者を連動させることで見えてくる、次世代の人材マネジメントのあり方を紹介します。",
+  "datePublished": "2026-09-10",
+  "dateModified": "2026-09-10",
+  "author": {
+    "@type": "Person",
+    "name": "古谷幸治"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社プロジェクト・イノベーション",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.emplex-pbm.com/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.emplex-pbm.com/blog/hr-management-01/"
+  },
+  "articleSection": "人材マネジメント"
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html">eMplex<span>PBM</span> コラム</a>
+    <nav><a href="../index.html">コラム一覧</a><a href="../../index.html#pricing">料金プラン</a></nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb"><a href="../../index.html">ホーム</a> / <a href="../index.html">コラム</a> / タレントマネジメントとプロジェクト収支の連動</div>
+  <article>
+    <div>
+      <span class="tag-pill">人材マネジメント</span>
+      <span class="article-date">2026-09-10</span>
+    </div>
+    <h1>タレントマネジメントとプロジェクト収支の連動</h1>
+    <div class="lead">人事評価とプロジェクトの収支データを切り離して管理していないでしょうか。両者を連動させることで見えてくる、次世代の人材マネジメントのあり方を紹介します。</div>
+<h2>人事評価とプロジェクト収支が切り離されている現状</h2>
+<p>多くの企業において、人事評価は上司の主観的な評価やアンケート、目標管理シートをもとに行われ、実際にその社員がどのプロジェクトでどれだけの収益や生産性を生み出したかというデータとは、切り離された形で運用されています。結果として、評価の納得感が得られにくかったり、実際の貢献度と評価にギャップが生じたりする問題が起こりがちです。評価者と被評価者の間で「見ている情報が違う」ことが、こうしたギャップの根本的な原因になっています。</p>
+<h2>プロジェクト収支データが持つ評価材料としての価値</h2>
+<p>案件ごとの工数管理や原価計算のデータが整備されていれば、各社員がどのプロジェクトにどれだけの時間を投下し、そのプロジェクトがどれだけの粗利を生み出したかを定量的に把握できます。もちろん収益だけで人を評価するべきではありませんが、こうした客観的なデータを評価の一つの材料として組み込むことで、評価の透明性と納得感を高めることができます。定性的な評価と定量的なデータを組み合わせることで、より多面的な人物評価が可能になります。</p>
+<h2>生産性連動人事がもたらす好循環</h2>
+<p>生産性データと人事評価を連動させることで、高い生産性を発揮した社員が正当に評価される仕組みが生まれます。これは単なる成果主義の徹底ではなく、社員自身が自分の工数配分や案件への関わり方を見直すきっかけにもなります。評価が数字によって裏付けられることで、社員のモチベーション向上と、組織全体の生産性向上という好循環が生まれやすくなります。</p>
+<h2>社員情報・給与データとの連携がもたらす経営視点</h2>
+<p>さらに、社員の給与データとプロジェクト収支を連携させることで、人件費が案件ごとの原価に正しく反映され、粗利計算の精度が向上します。これは人事部門だけの取り組みではなく、経営企画や財務部門とも連携すべき領域です。人材マネジメントを、単なる評価制度ではなく、プロジェクト収支起点の経営データの一部として捉え直すことが重要です。</p>
+<h2>導入にあたって配慮すべきこと</h2>
+<p>収支データを評価に組み込む際には、案件の難易度や市況要因など、個人の努力だけではコントロールできない要素があることにも十分配慮する必要があります。数字だけを機械的に当てはめると、不利な条件の案件を任された社員が不当に低く評価されてしまう恐れがあります。定量データはあくまで参考情報とし、最終的な評価判断には定性的な背景の考慮を組み合わせる運用設計が求められます。</p>
+<h2>具体的な活用イメージ</h2>
+<p>あるシステム開発会社では、プロジェクトの収支データと工数データを人事評価の参考資料として初めて活用したところ、これまで目立たなかった若手社員が、実は難易度の高い案件で高い生産性を発揮していたことが数字として明らかになりました。従来の主観的な評価だけでは見えていなかった貢献が可視化されたことで、その社員は早期に昇格し、さらに責任のある案件を任されるようになったといいます。</p>
+<h2>よくある質問</h2>
+<p>Q．収支データによる評価は、成果主義を強めることになりませんか。A．収支データはあくまで評価材料の一つであり、案件の難易度や協働への貢献といった定性的な要素と組み合わせて活用することが前提です。数字だけで機械的に評価することは推奨していません。Q．人事部門にプロジェクトの収支データを共有することに抵抗がある場合はどうすればよいですか。A．最初から個人別の詳細データを共有するのではなく、まずはチーム単位や事業単位の集計データから共有を始め、段階的に活用範囲を広げていくアプローチが現実的です。</p>
+<h2>導入までの流れ</h2>
+<p>収支データと人事評価の連動は、いきなり評価制度そのものを変えるのではなく、まずは参考情報としてプロジェクト収支データを評価者に共有するところから始めるのが現実的です。評価者がデータをどう解釈し、どのように評価に反映しているかを確認しながら運用し、納得感が得られる活用方法を模索していきます。運用が安定してきた段階で、評価制度の設計そのものに定量データの位置づけを正式に組み込み、人事部門・経営企画・財務部門が連携した恒常的な仕組みへと発展させていきます。</p>
+<h2>中長期的な組織づくりへの示唆</h2>
+<p>プロジェクト収支データと人事評価を連動させる取り組みは、短期的な評価の精度向上だけでなく、中長期的な人材育成の方針にも示唆を与えます。どのようなタイプの案件で高い生産性を発揮する人材が多いのか、逆にどのような案件で苦戦する傾向があるのかといった傾向が見えてくれば、育成計画や案件のアサイン方針そのものを見直すきっかけにもなります。人材マネジメントを評価制度の枠を超えた、組織づくり全体の戦略として捉え直す視点が求められます。</p>
+<h2>現場からよく挙がる懸念とその対応</h2>
+<p>人事部門からは「プロジェクトのデータを評価に持ち込むと、部門間の力関係が評価に影響しないか」という懸念が挙がることがあります。この懸念には、収支データはあくまで参考情報の一つであり、最終的な評価判断は評価者による定性的な考慮と組み合わせて行うという運用方針を明確にすることが有効です。データの位置づけを最初にすり合わせておくことで、部門間の不公平感を最小限に抑えることができます。</p>
+<h2>eMplex PBMでの実現イメージ</h2>
+<p>eMplex PBMのタレントマネジメント連携機能は、社員情報や給与データとプロジェクトの生産性データを連動させ、プロジェクト収支起点の人材マネジメントを実現する追加ソリューションです。「タレントパレット」を参考に構想された設計思想のもと、既存の人事システムを置き換えることなく、プロジェクト収支の観点を評価に組み込むことができます。</p>
+<h2>今後の展望：人材マネジメントの新しい標準へ</h2>
+<p>知識社会が進展する中で、工業社会型の一律的な人事評価から、個々の生産性や貢献度を定量的に捉えた人材マネジメントへの移行は、多くの業界で避けて通れない流れになりつつあります。プロジェクト収支データと連動した人材マネジメントは、その移行を支える具体的な手段の一つとして、今後さらに重要性を増していくと考えられます。</p>
+<h2>まとめ</h2>
+<p>タレントマネジメントとプロジェクト収支を連動させることは、評価の納得感を高めるだけでなく、組織全体の生産性向上にもつながる取り組みです。eMplex PBMは、社員情報・給与・生産性データと連動した、プロジェクト収支起点の人材マネジメント追加ソリューションを提供しています。</p>
+  </article>
+  <div class="related"><h3>関連記事</h3><div class="related-list"><a href="../forecast-management-01/index.html">「終わってから分かる」経営をなくす3つの視点</a><a href="../project-profitability-01/index.html">粗利率アラートが経営会議を変える理由</a><a href="../project-management-basics-01/index.html">プロジェクト管理会計と会計ソフトの違い</a></div></div>
+  <div class="cta">
+    <a href="../../index.html#pricing">eMplex PBM の無料相談・資料請求はこちら →</a>
+  </div>
+  <a class="back" href="../index.html">← コラム一覧に戻る</a>
+</div>
+<footer>
+  <div class="wrap">
+    &copy; 2026 株式会社プロジェクト・イノベーション / eMplex PBM
+  </div>
+</footer>
+</body>
+</html>

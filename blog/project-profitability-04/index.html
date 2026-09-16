@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プロジェクト収支管理における損益分岐点分析―案件ごとの損益分岐工数をどう算出するか | eMplex PBM コラム</title>
+<meta name="description" content="「この案件、どこまで工数をかけたら赤字になるのか」を即答できるプロジェクトマネージャーは、実はそう多くありません。損益分岐点という製造業では当たり前の概念を、プロジェクト単位の収支管理にどう応用するか、具体的な算出方法と運用の勘所を解説しま…">
+<link rel="canonical" href="https://www.emplex-pbm.com/blog/project-profitability-04/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="プロジェクト収支管理における損益分岐点分析―案件ごとの損益分岐工数をどう算出するか">
+<meta property="og:description" content="「この案件、どこまで工数をかけたら赤字になるのか」を即答できるプロジェクトマネージャーは、実はそう多くありません。損益分岐点という製造業では当たり前の概念を、プロジェクト単位の収支管理にどう応用するか、具体的な算出方法と運用の勘所を解説しま…">
+<meta property="og:url" content="https://www.emplex-pbm.com/blog/project-profitability-04/">
+<meta property="og:site_name" content="eMplex PBM コラム">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="プロジェクト収支管理における損益分岐点分析―案件ごとの損益分岐工数をどう算出するか">
+<meta name="twitter:description" content="「この案件、どこまで工数をかけたら赤字になるのか」を即答できるプロジェクトマネージャーは、実はそう多くありません。損益分岐点という製造業では当たり前の概念を、プロジェクト単位の収支管理にどう応用するか、具体的な算出方法と運用の勘所を解説しま…">
+<style>
+:root{
+  --bg0:#060c14;--bg1:#0a1628;--bg2:#0f2040;
+  --accent:#00d4ff;--accent2:#0090ff;--accent3:#00e8b8;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;
+  --border:rgba(0,212,255,0.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Hiragino Sans','Yu Gothic UI','Noto Sans JP',sans-serif;background:var(--bg0);color:var(--text);line-height:1.85;}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:rgba(6,12,20,.9);position:sticky;top:0;backdrop-filter:blur(10px);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;color:#fff;text-decoration:none;letter-spacing:.5px;font-size:15px}
+.logo span{color:var(--accent)}
+nav a{color:var(--text2);text-decoration:none;font-size:13px;margin-left:18px}
+.breadcrumb{font-size:12px;color:var(--text3);margin:24px 0 8px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.tag-pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px;border:1px solid var(--border);color:var(--accent);background:rgba(0,212,255,.08)}
+.article-date{font-size:12px;color:var(--text3);font-family:monospace;margin-left:10px}
+h1{font-size:26px;font-weight:800;line-height:1.5;margin:14px 0 18px;color:#fff}
+.lead{font-size:15.5px;color:var(--text);background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:28px}
+article h2{font-size:19px;font-weight:700;color:#fff;margin:38px 0 14px;padding-left:12px;border-left:3px solid var(--accent)}
+article p{font-size:15px;color:var(--text2);margin-bottom:18px}
+.related{margin-top:48px;padding-top:28px;border-top:1px solid var(--border)}
+.related h3{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.related-list a{display:block;padding:12px 14px;margin-bottom:8px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:13.5px}
+.related-list a:hover{border-color:var(--accent)}
+.cta{margin-top:36px;padding:22px;text-align:center;border:1px solid var(--border);border-radius:14px;background:rgba(0,212,255,.05)}
+.cta a{color:var(--accent);text-decoration:none;font-weight:700;font-size:13.5px}
+footer{border-top:1px solid var(--border);margin-top:60px;padding:30px 0;text-align:center;color:var(--text3);font-size:12px}
+footer a{color:var(--text3)}
+.back{display:inline-block;margin:20px 0 0;color:var(--text2);text-decoration:none;font-size:13px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "プロジェクト収支管理における損益分岐点分析―案件ごとの損益分岐工数をどう算出するか",
+  "description": "「この案件、どこまで工数をかけたら赤字になるのか」を即答できるプロジェクトマネージャーは、実はそう多くありません。損益分岐点という製造業では当たり前の概念を、プロジェクト単位の収支管理にどう応用するか、具体的な算出方法と運用の勘所を解説しま…",
+  "datePublished": "2026-09-16",
+  "dateModified": "2026-09-16",
+  "author": {
+    "@type": "Person",
+    "name": "古谷幸治"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社プロジェクト・イノベーション",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.emplex-pbm.com/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.emplex-pbm.com/blog/project-profitability-04/"
+  },
+  "articleSection": "プロジェクト収支管理"
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html">eMplex<span>PBM</span> コラム</a>
+    <nav><a href="../index.html">コラム一覧</a><a href="../../index.html#pricing">料金プラン</a></nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb"><a href="../../index.html">ホーム</a> / <a href="../index.html">コラム</a> / プロジェクト収支管理における損益分岐点分析―案件ごとの損益分岐工数をどう算出するか</div>
+  <article>
+    <div>
+      <span class="tag-pill">プロジェクト収支管理</span>
+      <span class="article-date">2026-09-16</span>
+    </div>
+    <h1>プロジェクト収支管理における損益分岐点分析―案件ごとの損益分岐工数をどう算出するか</h1>
+    <div class="lead">「この案件、どこまで工数をかけたら赤字になるのか」を即答できるプロジェクトマネージャーは、実はそう多くありません。損益分岐点という製造業では当たり前の概念を、プロジェクト単位の収支管理にどう応用するか、具体的な算出方法と運用の勘所を解説します。</div>
+<h2>結論、損益分岐点は「事後に振り返る指標」ではなく「着手前に持つべき地図」</h2>
+<p>損益分岐点分析というと、決算が終わった後に「今期はこの売上高で黒字化した」と振り返るための指標だと思われがちです。しかしプロジェクト型ビジネスにおいて本当に価値があるのは、案件に着手する前の段階で、あとどれだけ工数を使えば赤字に転落するのかという「損益分岐工数」を把握しておくことです。地図を持たずに山に登るようなものだと考えれば、その重要性は明らかでしょう。着手前にこの数字を共有できているかどうかで、現場の判断のスピードは大きく変わります。</p>
+<h2>製造業の損益分岐点分析とプロジェクト型ビジネスの違い</h2>
+<p>製造業における損益分岐点分析は、固定費と変動費を分解し、何個売れば固定費を回収できるかを算出するのが基本です。プロジェクト型ビジネスでは「個数」に相当する単位が存在せず、代わりに投入工数や外注費の積み上げが原価を構成します。したがって損益分岐点を「受注金額に対して、あとどれだけの工数・外注費を投下できるか」という形に読み替える必要があります。この読み替えを行わずに製造業の公式をそのまま当てはめようとして、現場で使えない指標になってしまっている会社を数多く見てきました。</p>
+<h2>損益分岐工数の算出方法―固定費と変動費の切り分け</h2>
+<p>算出の第一歩は、案件の原価を固定的な部分と工数に比例して増える部分とに分解することです。受注が確定した時点で発生する固定的な外注契約や一部の経費は固定費として扱い、投入されるエンジニアやコンサルタントの人件費は工数に比例する変動費として扱います。受注金額から固定費を差し引いた金額を、時間あたりの人件費単価で割ることで、その案件で許容できる総工数、すなわち損益分岐工数が算出できます。この数字を案件開始時点でプロジェクトマネージャーと共有しておくことが、運用の出発点になります。</p>
+<h2>損益分岐工数を「進捗管理の物差し」として使う</h2>
+<p>損益分岐工数を算出しただけでは意味がありません。実際の運用では、案件の進捗率に対して、現時点でどれだけ工数を消化しているかを継続的に突き合わせ、損益分岐工数に対する消化ペースを可視化することが重要です。進捗率50%の時点で、すでに損益分岐工数の60%を消化してしまっているとすれば、それは早期に軌道修正が必要な明確なシグナルです。数字を一度出して終わりにせず、進捗と並走させる運用にして初めて、損益分岐点分析は経営に資する道具になります。</p>
+<h2>案件の性質によって損益分岐点の「余白」を変える</h2>
+<p>すべての案件に一律の余裕度を求める必要はありません。仕様が固まっている定型的な案件であれば損益分岐点ぎりぎりまで攻めた見積りでも問題は起きにくい一方、仕様変更が頻発しやすい新規性の高い案件では、あらかじめ損益分岐工数に対して一定の余白を持たせた見積り設計をしておくべきです。この余白の設計を怠ると、想定外の仕様変更が発生した瞬間に、あっという間に損益分岐点を突破してしまうことになります。案件の性質に応じてリスクバッファーを変える視点が欠かせません。</p>
+<h2>損益分岐点の可視化が、値引き交渉の武器になる</h2>
+<p>営業担当者が値引き交渉に応じるかどうかを勘で判断している会社は少なくありません。しかし損益分岐工数が明確になっていれば、「この金額まで下げても、想定工数の範囲内であれば黒字を確保できる」という具体的な根拠を持って交渉に臨むことができます。逆に損益分岐点を割り込む値引きは、感覚ではなく数字として明確に拒否できるようになります。営業と現場が同じ物差しを共有できることが、値引き交渉における組織全体の判断のぶれを減らします。</p>
+<h2>エンプレックス時代に痛感した「見えない損益分岐点」の怖さ</h2>
+<p>私がエンプレックスでCFOを務めていた時代、複数の開発案件を並行して抱える中で、どの案件がどこまで工数をかけたら赤字になるのかを、担当者の感覚に頼ったまま進めていた時期がありました。ある案件で仕様変更が重なり、気づいたときにはすでに損益分岐点を大きく超えていたという苦い経験があります。この経験がきっかけとなり、受注時点で損益分岐工数を明示し、進捗と突き合わせる運用を仕組み化する必要性を痛感し、後のプロジェクトバジェット・マネジメントシステムの設計思想に色濃く反映されることになりました。</p>
+<h2>200社の支援で見えた、損益分岐点管理の定着企業の共通点</h2>
+<p>これまで200社を超えるプロジェクト型ビジネスの経営管理を支援してきた中で、損益分岐点管理が定着している会社に共通していたのは、この数字を経理部門だけでなくプロジェクトマネージャー自身が日常的に確認できる環境を整えていたことです。逆に経理が月次でまとめて算出し、現場に事後報告するだけの運用では、赤字転落に気づくタイミングが常に一歩遅れてしまう傾向がはっきりと見られました。数字を「誰が、いつ見るか」という設計こそが、損益分岐点分析を機能させる分水嶺になります。</p>
+<h2>よくある質問</h2>
+<p>Q．損益分岐工数はどのくらいの頻度で見直すべきですか。A．案件の前提条件が大きく変わった時点、例えば仕様変更や追加発注が発生したタイミングで速やかに再計算することをお勧めします。定例では月次の見直しを基本としつつ、大きな変化があれば都度更新する運用が現実的です。Q．小規模な案件でも損益分岐点分析は必要ですか。A．むしろ小規模な案件ほど、わずかな工数超過が採算全体に与える影響は相対的に大きくなります。金額の大小にかかわらず、着手前に損益分岐工数を確認する習慣を持つことをお勧めします。</p>
+<h2>業種による応用ポイントの違い</h2>
+<p>損益分岐点分析の基本的な考え方はどの業種にも共通しますが、変動費の中心となる要素は業種によって異なります。ITサービス業ではエンジニアの工数超過が主な変動要因になりやすく、建設業では資材価格や外注先の追加発注が影響しやすい傾向があります。映像制作業であれば撮影日数の増加や機材のレンタル費用が変動費として大きな比重を占めることもあります。自社の業種特性に応じて、どの費目を変動費として重点的に監視すべきかをあらかじめ整理しておくことが、実務での運用精度を高めます。</p>
+<h2>導入までの流れ</h2>
+<p>損益分岐点分析を導入する際は、まず金額規模の大きい重要案件を数件選び、固定費と変動費の切り分けルールを試験的に運用するところから始めるのが現実的です。運用しながら、自社の原価構造にとって固定費・変動費の分類基準が妥当かどうかを確認し、必要に応じて調整します。試験運用で手応えが得られたら、対象案件を段階的に広げ、最終的にはすべての新規案件で受注時点から損益分岐工数を算出する運用へと発展させていくのが、無理のない定着プロセスです。</p>
+<h2>まとめ</h2>
+<p>損益分岐点分析は、決算後に振り返るための指標ではなく、案件に着手する前から現場と共有し、進捗と並走させながら使い続けるための地図です。固定費と変動費を切り分けて損益分岐工数を算出し、案件の性質に応じた余白を持たせ、営業交渉の根拠としても活用する。この一連の運用を仕組み化できるかどうかが、赤字案件を未然に防げるかどうかの分かれ目になります。eMplex PBMでは、案件ごとの予算・実績・進捗をリアルタイムに突き合わせる機能を通じて、こうした損益分岐点管理の運用を日常業務の中に自然に組み込めるよう設計しています。</p>
+  </article>
+  <div class="related"><h3>関連記事</h3><div class="related-list"><a href="../project-profitability-01/index.html">粗利率アラートが経営会議を変える理由</a><a href="../project-profitability-03/index.html">プロジェクト別採算が実現しない5つの要因とは？儲かっているはずなのに現金が残らない本当の理由</a><a href="../cost-accounting-16/index.html">プロジェクト別原価計算の導入目的と役割</a></div></div>
+  <div class="cta">
+    <a href="../../index.html#pricing">eMplex PBM の無料相談・資料請求はこちら →</a>
+  </div>
+  <a class="back" href="../index.html">← コラム一覧に戻る</a>
+</div>
+<footer>
+  <div class="wrap">
+    &copy; 2026 株式会社プロジェクト・イノベーション / eMplex PBM
+  </div>
+</footer>
+</body>
+</html>

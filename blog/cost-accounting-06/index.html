@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プロジェクト別原価計算における部門別組織と営業・管理部門の役割 | eMplex PBM コラム</title>
+<meta name="description" content="プロジェクト別に原価を計算する仕組みを整えても、営業部門や管理部門のコストをどう扱うかを決めていなければ、全社の損益とプロジェクト別損益の合計が一致しないという事態に陥ります。プロジェクトの現場は「自分たちが稼いでいる」と感じていても、営業…">
+<link rel="canonical" href="https://www.emplex-pbm.com/blog/cost-accounting-06/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="プロジェクト別原価計算における部門別組織と営業・管理部門の役割">
+<meta property="og:description" content="プロジェクト別に原価を計算する仕組みを整えても、営業部門や管理部門のコストをどう扱うかを決めていなければ、全社の損益とプロジェクト別損益の合計が一致しないという事態に陥ります。プロジェクトの現場は「自分たちが稼いでいる」と感じていても、営業…">
+<meta property="og:url" content="https://www.emplex-pbm.com/blog/cost-accounting-06/">
+<meta property="og:site_name" content="eMplex PBM コラム">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="プロジェクト別原価計算における部門別組織と営業・管理部門の役割">
+<meta name="twitter:description" content="プロジェクト別に原価を計算する仕組みを整えても、営業部門や管理部門のコストをどう扱うかを決めていなければ、全社の損益とプロジェクト別損益の合計が一致しないという事態に陥ります。プロジェクトの現場は「自分たちが稼いでいる」と感じていても、営業…">
+<style>
+:root{
+  --bg0:#060c14;--bg1:#0a1628;--bg2:#0f2040;
+  --accent:#00d4ff;--accent2:#0090ff;--accent3:#00e8b8;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;
+  --border:rgba(0,212,255,0.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Hiragino Sans','Yu Gothic UI','Noto Sans JP',sans-serif;background:var(--bg0);color:var(--text);line-height:1.85;}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:rgba(6,12,20,.9);position:sticky;top:0;backdrop-filter:blur(10px);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;color:#fff;text-decoration:none;letter-spacing:.5px;font-size:15px}
+.logo span{color:var(--accent)}
+nav a{color:var(--text2);text-decoration:none;font-size:13px;margin-left:18px}
+.breadcrumb{font-size:12px;color:var(--text3);margin:24px 0 8px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.tag-pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px;border:1px solid var(--border);color:var(--accent);background:rgba(0,212,255,.08)}
+.article-date{font-size:12px;color:var(--text3);font-family:monospace;margin-left:10px}
+h1{font-size:26px;font-weight:800;line-height:1.5;margin:14px 0 18px;color:#fff}
+.lead{font-size:15.5px;color:var(--text);background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:28px}
+article h2{font-size:19px;font-weight:700;color:#fff;margin:38px 0 14px;padding-left:12px;border-left:3px solid var(--accent)}
+article p{font-size:15px;color:var(--text2);margin-bottom:18px}
+.related{margin-top:48px;padding-top:28px;border-top:1px solid var(--border)}
+.related h3{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.related-list a{display:block;padding:12px 14px;margin-bottom:8px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:13.5px}
+.related-list a:hover{border-color:var(--accent)}
+.cta{margin-top:36px;padding:22px;text-align:center;border:1px solid var(--border);border-radius:14px;background:rgba(0,212,255,.05)}
+.cta a{color:var(--accent);text-decoration:none;font-weight:700;font-size:13.5px}
+footer{border-top:1px solid var(--border);margin-top:60px;padding:30px 0;text-align:center;color:var(--text3);font-size:12px}
+footer a{color:var(--text3)}
+.back{display:inline-block;margin:20px 0 0;color:var(--text2);text-decoration:none;font-size:13px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "プロジェクト別原価計算における部門別組織と営業・管理部門の役割",
+  "description": "プロジェクト別に原価を計算する仕組みを整えても、営業部門や管理部門のコストをどう扱うかを決めていなければ、全社の損益とプロジェクト別損益の合計が一致しないという事態に陥ります。プロジェクトの現場は「自分たちが稼いでいる」と感じていても、営業…",
+  "datePublished": "2026-02-26",
+  "dateModified": "2026-02-26",
+  "author": {
+    "@type": "Person",
+    "name": "古谷幸治"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社プロジェクト・イノベーション",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.emplex-pbm.com/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.emplex-pbm.com/blog/cost-accounting-06/"
+  },
+  "articleSection": "原価計算実務"
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html">eMplex<span>PBM</span> コラム</a>
+    <nav><a href="../index.html">コラム一覧</a><a href="../../index.html#pricing">料金プラン</a></nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb"><a href="../../index.html">ホーム</a> / <a href="../index.html">コラム</a> / プロジェクト別原価計算における部門別組織と営業・管理部門の役割</div>
+  <article>
+    <div>
+      <span class="tag-pill">原価計算実務</span>
+      <span class="article-date">2026-02-26</span>
+    </div>
+    <h1>プロジェクト別原価計算における部門別組織と営業・管理部門の役割</h1>
+    <div class="lead">プロジェクト別に原価を計算する仕組みを整えても、営業部門や管理部門のコストをどう扱うかを決めていなければ、全社の損益とプロジェクト別損益の合計が一致しないという事態に陥ります。プロジェクトの現場は「自分たちが稼いでいる」と感じていても、営業活動や間接部門の存在なしにプロジェクトは成立しません。本記事では、プロジェクト別原価計算における部門別組織の設計と、営業・管理部門のコストをどう位置づけ、どう配分すべきかを整理します。</div>
+<h2>プロジェクト別原価計算と部門別組織はなぜ両輪なのか</h2>
+<p>結論として、プロジェクト別原価計算は、部門別の組織構造と組み合わせて初めて全社の損益と整合します。プロジェクトは案件という「横串」の単位であるのに対し、組織は部門という「縦割り」の単位で構成されており、両者を対応づける仕組みがなければ、プロジェクト別損益の合計が全社決算と食い違ってしまうためです。営業部門・制作部門・管理部門という三つの部門があるとき、プロジェクトに直接紐づくのは制作部門のコストが中心であり、営業と管理のコストは何らかの基準でプロジェクトに配分しなければ、全社コストの一部が宙に浮いてしまいます。部門別のコスト構造を可視化することが、プロジェクト別採算管理の前提条件になります。</p>
+<h2>営業部門の役割とコストの扱い方</h2>
+<p>結論として、営業部門の人件費や活動費は、個別のプロジェクトを受注するために発生した投資的なコストとして位置づけ、受注済みのプロジェクトに配分するのが一般的な考え方です。営業部門は特定のプロジェクトの遂行そのものには関わりませんが、その存在なしには案件は生まれないため、間接的なコストとしてプロジェクトが負担すべきだからです。営業部門の年間コストを、その年に成約した案件の受注金額の総額で割って配賦率を算出し、各プロジェクトの受注金額にその配賦率を掛けて営業コストを配分する方法がよく用いられます。営業コストをプロジェクトに適切に配分することで、営業活動の投資対効果も見えるようになります。</p>
+<h2>管理部門の役割とコストの扱い方</h2>
+<p>結論として、管理部門のコストは、直接人件費の額や売上高を基準に、全プロジェクトへ按分するのが実務上の標準的な方法です。管理部門は特定のプロジェクトを支援しているのではなく、全社の運営基盤を支える役割を担っているため、公平な基準で全プロジェクトに薄く配分することが合理的だからです。管理部門の年間コストを、全プロジェクトの直接人件費の合計で割って配賦率を求め、各プロジェクトの直接人件費に応じて按分する方法が広く採用されています。管理部門のコストを可視化して初めて、プロジェクトが本当に会社に貢献しているかどうかの全体像が見えてきます。</p>
+<h2>部門別組織の設計とプロジェクトコードの対応関係</h2>
+<p>結論として、部門別組織とプロジェクトコードは、それぞれ別の軸として設計し、両方の切り口で損益を見られるようにしておくことが望ましい設計です。部門別損益だけを見ていると、どのプロジェクトが儲かっているかが分からず、逆にプロジェクト別損益だけを見ていると、どの部門が全体をけん引しているかが見えなくなるためです。同じ制作部門に所属する二人のプロジェクトマネージャーが、それぞれ別のプロジェクトを担当している場合、部門別損益では合算されて見えなくなる個々のプロジェクトの採算を、プロジェクトコード別の集計で補完する必要があります。マトリクス型の集計を可能にする組織設計とコード体系の整備が、多角的な採算把握の鍵になります。</p>
+<h2>配賦基準が古いままだと起きる問題</h2>
+<p>結論として、営業・管理部門の配賦基準を一度決めたまま長年見直さずにいると、事業構造の変化に伴って配賦結果が実態と乖離していきます。事業の成長段階によって営業活動の重さや管理部門の負担は変化するため、固定的な配賦基準では実態を反映できなくなるからです。創業期に決めた配賦基準を10年近く据え置いていた会社で、新規事業のプロジェクトに旧事業と同じ配賦率を適用した結果、実態よりも過大なコスト負担が新規事業にのしかかり、撤退の誤った判断につながりかけたケースがありました。配賦基準は少なくとも数年に一度、事業構造の変化に合わせて見直す運用にすべきです。</p>
+<h2>実体験——エンプレックス時代の部門別・プロジェクト別のマトリクス管理</h2>
+<p>私がエンプレックスでCFOを務めていた頃、営業部門・開発部門・管理部門という縦割りの組織構造と、プロジェクトごとの採算というマトリクスの両方を同時に見える化する必要に迫られました。当初は部門別のP/Lしか整備されておらず、どの部門も「自分たちは頑張っている」と主張する一方で、実際に利益を生んでいるプロジェクトがどれかを特定できずにいました。プロジェクトバジェット・マネジメントシステムの原型は、この部門とプロジェクトの二軸を両立させる必要性から生まれたものです。</p>
+<h2>eMplex PBMによる部門別・プロジェクト別の二軸管理</h2>
+<p>結論として、プロジェクト管理システムには、部門別の集計とプロジェクト別の集計を同じデータから同時に生成できる仕組みが求められます。別々のシステムやExcelで部門別とプロジェクト別を管理していると、数字の整合性を取るだけで多大な労力がかかるためです。eMplex PBMでは、すべての原価データにプロジェクトコードと所属部門コードの両方を紐づけて記録し、経営会議の目的に応じて部門別損益とプロジェクト別損益のどちらの切り口でも即座にレポートを出力できるようにしています。一つのデータ基盤から複数の切り口で損益を見られることが、意思決定のスピードを大きく左右します。</p>
+<h2>まとめ</h2>
+<p>営業・管理部門のコストをどう扱うかを決めないまま、プロジェクト別原価計算だけを精緻化しても、全社の損益との整合性は取れません。部門とプロジェクトという二つの軸を両立させて初めて、経営に役立つ採算管理が実現します。組織は縦に、プロジェクトは横に見る、という視点の使い分けが、管理会計の基本姿勢だといえるでしょう。</p>
+  </article>
+  <div class="related"><h3>関連記事</h3><div class="related-list"><a href="../cost-accounting-08/index.html">プロジェクト外注費・経費の集計と管理実務</a><a href="../cost-accounting-05/index.html">プロジェクト管理会計における直接人件費と間接人件費の計算実務</a></div></div>
+  <div class="cta">
+    <a href="../../index.html#pricing">eMplex PBM の無料相談・資料請求はこちら →</a>
+  </div>
+  <a class="back" href="../index.html">← コラム一覧に戻る</a>
+</div>
+<footer>
+  <div class="wrap">
+    &copy; 2026 株式会社プロジェクト・イノベーション / eMplex PBM
+  </div>
+</footer>
+</body>
+</html>

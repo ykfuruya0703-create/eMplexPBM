@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ITプロジェクトの原価計算と外注管理の指針 | eMplex PBM コラム</title>
+<meta name="description" content="IT業界のプロジェクト原価計算が他業種に比べて難しいと言われる最大の理由は、外注費の比重が大きく、しかも多重下請け構造の中で「誰が何にいくら使ったのか」がどうしても見えにくくなりがちだからです。自社の工数だけを見ていては原価の全体像はつかめ…">
+<link rel="canonical" href="https://www.emplex-pbm.com/blog/cost-accounting-13/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ITプロジェクトの原価計算と外注管理の指針">
+<meta property="og:description" content="IT業界のプロジェクト原価計算が他業種に比べて難しいと言われる最大の理由は、外注費の比重が大きく、しかも多重下請け構造の中で「誰が何にいくら使ったのか」がどうしても見えにくくなりがちだからです。自社の工数だけを見ていては原価の全体像はつかめ…">
+<meta property="og:url" content="https://www.emplex-pbm.com/blog/cost-accounting-13/">
+<meta property="og:site_name" content="eMplex PBM コラム">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ITプロジェクトの原価計算と外注管理の指針">
+<meta name="twitter:description" content="IT業界のプロジェクト原価計算が他業種に比べて難しいと言われる最大の理由は、外注費の比重が大きく、しかも多重下請け構造の中で「誰が何にいくら使ったのか」がどうしても見えにくくなりがちだからです。自社の工数だけを見ていては原価の全体像はつかめ…">
+<style>
+:root{
+  --bg0:#060c14;--bg1:#0a1628;--bg2:#0f2040;
+  --accent:#00d4ff;--accent2:#0090ff;--accent3:#00e8b8;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;
+  --border:rgba(0,212,255,0.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Hiragino Sans','Yu Gothic UI','Noto Sans JP',sans-serif;background:var(--bg0);color:var(--text);line-height:1.85;}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:rgba(6,12,20,.9);position:sticky;top:0;backdrop-filter:blur(10px);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;color:#fff;text-decoration:none;letter-spacing:.5px;font-size:15px}
+.logo span{color:var(--accent)}
+nav a{color:var(--text2);text-decoration:none;font-size:13px;margin-left:18px}
+.breadcrumb{font-size:12px;color:var(--text3);margin:24px 0 8px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.tag-pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px;border:1px solid var(--border);color:var(--accent);background:rgba(0,212,255,.08)}
+.article-date{font-size:12px;color:var(--text3);font-family:monospace;margin-left:10px}
+h1{font-size:26px;font-weight:800;line-height:1.5;margin:14px 0 18px;color:#fff}
+.lead{font-size:15.5px;color:var(--text);background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:28px}
+article h2{font-size:19px;font-weight:700;color:#fff;margin:38px 0 14px;padding-left:12px;border-left:3px solid var(--accent)}
+article p{font-size:15px;color:var(--text2);margin-bottom:18px}
+.related{margin-top:48px;padding-top:28px;border-top:1px solid var(--border)}
+.related h3{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.related-list a{display:block;padding:12px 14px;margin-bottom:8px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:13.5px}
+.related-list a:hover{border-color:var(--accent)}
+.cta{margin-top:36px;padding:22px;text-align:center;border:1px solid var(--border);border-radius:14px;background:rgba(0,212,255,.05)}
+.cta a{color:var(--accent);text-decoration:none;font-weight:700;font-size:13.5px}
+footer{border-top:1px solid var(--border);margin-top:60px;padding:30px 0;text-align:center;color:var(--text3);font-size:12px}
+footer a{color:var(--text3)}
+.back{display:inline-block;margin:20px 0 0;color:var(--text2);text-decoration:none;font-size:13px}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ITプロジェクトの原価計算と外注管理の指針",
+  "description": "IT業界のプロジェクト原価計算が他業種に比べて難しいと言われる最大の理由は、外注費の比重が大きく、しかも多重下請け構造の中で「誰が何にいくら使ったのか」がどうしても見えにくくなりがちだからです。自社の工数だけを見ていては原価の全体像はつかめ…",
+  "datePublished": "2026-02-16",
+  "dateModified": "2026-02-16",
+  "author": {
+    "@type": "Person",
+    "name": "古谷幸治"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社プロジェクト・イノベーション",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.emplex-pbm.com/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.emplex-pbm.com/blog/cost-accounting-13/"
+  },
+  "articleSection": "原価計算実務"
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html">eMplex<span>PBM</span> コラム</a>
+    <nav><a href="../index.html">コラム一覧</a><a href="../../index.html#pricing">料金プラン</a></nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb"><a href="../../index.html">ホーム</a> / <a href="../index.html">コラム</a> / ITプロジェクトの原価計算と外注管理の指針</div>
+  <article>
+    <div>
+      <span class="tag-pill">原価計算実務</span>
+      <span class="article-date">2026-02-16</span>
+    </div>
+    <h1>ITプロジェクトの原価計算と外注管理の指針</h1>
+    <div class="lead">IT業界のプロジェクト原価計算が他業種に比べて難しいと言われる最大の理由は、外注費の比重が大きく、しかも多重下請け構造の中で「誰が何にいくら使ったのか」がどうしても見えにくくなりがちだからです。自社の工数だけを見ていては原価の全体像はつかめず、かといって外注先の内訳まで細かく管理しようとすると、今度は契約関係が複雑になりすぎます。この記事では、ITプロジェクトにおける原価計算の勘所と、外注管理をどこまで、どのように行うべきかという実務上の指針を整理していきます。</div>
+<h2>外注費が原価の過半を占める構造を前提に設計する</h2>
+<p>システム開発やSIのプロジェクトでは、自社の直接工数よりも外注費の方が原価の大半を占めることが珍しくありません。この構造を前提とせずに、内製の工数管理だけに力を入れて原価計算の仕組みを設計してしまうと、実際の採算とはかけ離れた数字しか得られません。まずは案件ごとの原価に占める外注費の比率を把握し、その比率が高い案件ほど、発注書・検収・請求のプロセス管理に重点を置くという優先順位づけが必要になります。</p>
+<h2>検収基準を明確にし原価計上のタイミングを揃える</h2>
+<p>外注先から成果物が納品された時点と、実際に自社での検収が完了した時点にはズレが生じることがよくあります。このズレを放置すると、外注費の計上タイミングが月をまたいでしまい、案件別損益の月次比較が意味をなさなくなります。検収完了をもって原価計上する、あるいは進捗に応じて按分計上するなど、案件の性質に応じた基準をあらかじめ定め、営業・開発・経理の三者で共有しておくことが、原価計上のブレを防ぐ鍵になります。</p>
+<h2>多重下請け構造がもたらす原価の見えにくさ</h2>
+<p>IT業界特有の多重下請け構造では、元請けから見て二次請け、三次請けの原価構造がブラックボックス化しやすく、外注先からの請求金額が適正かどうかの判断が難しくなります。またこの構造は、実質的な指揮命令が発注元から下請けの作業者に直接及んでしまう、いわゆる偽装請負のリスクとも隣り合わせです。原価計算の精度を上げることは、単なる会計上の関心にとどまらず、契約形態の適正化という法務的なリスク管理にもつながっている点を見落としてはいけません。</p>
+<h2>内製と外注のコスト比較を仕組み化する</h2>
+<p>ある工程を内製するか外注するかの判断は、案件が始まる前の見積段階で最も重要な意思決定の一つです。自社の予定賃率で算出した内製コストと、外注先からの見積金額を並べて比較できる仕組みがあれば、価格だけでなく納期リスクや品質リスクも含めた総合判断がしやすくなります。この比較を毎回ゼロから行うのではなく、過去案件の実績データを蓄積し、類似案件の判断材料として使えるようにしておくことが、判断の精度とスピードの両方を高めます。</p>
+<h2>エンプレックス時代に見たSI業界の原価管理の難しさ</h2>
+<p>私はエンプレックスでCFOを務めていた時代、ITCRMソフトウェアの受託開発や導入支援といったSI型のビジネスの経営管理に深く関わりました。当時強く感じたのは、開発が佳境に入り仕様変更や追加対応が重なるほど、外注先への追加発注が現場の裁量で先行し、経理側での原価把握が後追いになりやすいという構造的な難しさです。この経験から、外注発注そのものを案件コードと連動させ、発注段階で原価が見える仕組みを整えることの重要性を痛感しました。</p>
+<h2>外注先ごとの実績データを次の見積に活かす</h2>
+<p>外注管理を単なる支払い管理で終わらせず、外注先ごとの品質・納期遵守率・追加費用の発生頻度といった実績データを蓄積していくと、次のプロジェクトの見積精度が着実に向上していきます。過去に追加費用が発生しやすかった外注先には、あらかじめ見積に一定のバッファを積んでおくといった判断ができるようになります。この蓄積は一朝一夕にはできませんが、200社を超える企業を見てきた中でも、この習慣がある会社ほど見積の的中率が高い傾向がはっきりと表れていました。</p>
+<h2>契約変更管理と原価計算を連動させる</h2>
+<p>IT開発案件では、要件定義後の仕様変更や追加開発が頻発します。これらを個別の追加契約として明確に切り分け、原価計算上も元の案件と紐づけつつ区分して集計できるようにしておかないと、当初見積との比較そのものが意味を失います。契約変更が発生した時点で速やかに原価計算システム側にも反映させる運用フローを整えておくことが、外注管理と原価管理を破綻させないための実務上の生命線になります。</p>
+<h2>まとめ</h2>
+<p>ITプロジェクトの原価計算は、外注費という自社の外側にあるコストをいかに正確かつタイムリーに取り込むかで、その精度の大半が決まります。多重下請け構造の複雑さに委縮するのではなく、検収基準や契約変更のルールをあらかじめ整えておくことで、見通しの良い原価管理は十分に実現できます。外注は管理し切れないブラックボックスではなく、ルールさえ整えれば見える化できる相手だと捉え直すことこそが、ITプロジェクトの採算改善への確かな近道です。</p>
+  </article>
+  <div class="related"><h3>関連記事</h3><div class="related-list"><a href="../cost-accounting-15/index.html">プロジェクトコードの採番ルールと設計指針</a><a href="../cost-accounting-10/index.html">プロジェクト原価計算と予定賃率の仕組み</a></div></div>
+  <div class="cta">
+    <a href="../../index.html#pricing">eMplex PBM の無料相談・資料請求はこちら →</a>
+  </div>
+  <a class="back" href="../index.html">← コラム一覧に戻る</a>
+</div>
+<footer>
+  <div class="wrap">
+    &copy; 2026 株式会社プロジェクト・イノベーション / eMplex PBM
+  </div>
+</footer>
+</body>
+</html>
