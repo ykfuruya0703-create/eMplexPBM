@@ -48,6 +48,24 @@ article p{font-size:15px;color:var(--text2);margin-bottom:18px}
 footer{border-top:1px solid var(--border);margin-top:60px;padding:30px 0;text-align:center;color:var(--text3);font-size:12px}
 footer a{color:var(--text3)}
 .back{display:inline-block;margin:20px 0 0;color:var(--text2);text-decoration:none;font-size:13px}
+
+.next-step{margin-top:48px;padding-top:30px;border-top:1px solid var(--border)}
+.next-step>h3{font-size:12px;letter-spacing:1.5px;color:var(--text3);margin-bottom:6px}
+.next-step>p.ns-lead{font-size:16px;font-weight:800;color:#fff;margin-bottom:18px;line-height:1.6}
+.ns-card{border:1px solid var(--border);border-radius:14px;padding:22px 22px 20px;margin-bottom:14px;background:rgba(255,255,255,.02);position:relative;overflow:hidden}
+.ns-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--nsc)}
+.ns-card.pbm{--nsc:var(--accent)}
+.ns-card.course{--nsc:#f59e0b;background:rgba(245,158,11,.04);border-color:rgba(245,158,11,.25)}
+.ns-tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.5px;color:var(--nsc);margin-bottom:8px}
+.ns-card h4{font-size:16px;font-weight:800;color:#fff;margin-bottom:8px;line-height:1.5}
+.ns-card p{font-size:13.5px;color:var(--text2);margin-bottom:10px;line-height:1.85}
+.ns-card ul{list-style:none;margin:0 0 12px;display:flex;flex-direction:column;gap:5px}
+.ns-card li{font-size:13px;color:var(--text);padding-left:16px;position:relative;line-height:1.7}
+.ns-card li::before{content:'▸';position:absolute;left:0;color:var(--nsc)}
+.ns-link{font-size:13px;font-weight:700;color:var(--nsc);text-decoration:none}
+.ns-link:hover{text-decoration:underline}
+.ns-btn{display:block;text-align:center;margin-top:6px;padding:15px 20px;border-radius:10px;background:linear-gradient(135deg,#0090ff,#00d4ff);color:#031018;font-weight:800;font-size:14px;text-decoration:none}
+.ns-btn:hover{opacity:.92}
 </style>
 <script type="application/ld+json">
 {
@@ -117,6 +135,24 @@ var _trackingid = 'LFT-46372-1';
 <h2>まとめ</h2>
 <p>CFOという役職は、決算を締めるためのポストではなく、事業の未来に数字で光を当てるための役割です。守りの財務にとどまらず、攻めの経営参謀として事業成長にコミットできるかどうかが、これからのCFOの価値を決めます。CFOとは、数字を守る人ではなく、数字で未来を切り拓く人である。この一文を胸に、日々の実務に向き合っていただければと思います。</p>
   </article>
+  <section class="next-step">
+    <h3>NEXT STEP</h3>
+    <p class="ns-lead">このコラムの内容を、実務で活かすために</p>
+    <div class="ns-card pbm">
+      <span class="ns-tag">eMplex PBM の機能</span>
+      <h4>事業別／プロジェクト別収支レポート</h4>
+      <p>本コラムのテーマを日々の運用で実現するには、eMplex PBM の「事業別／プロジェクト別収支レポート」が役立ちます。事業別売上・粗利益・粗利率をワンクリックで可視化。プロジェクト単位の収支実績もドリルダウンで確認でき、経営会議の数字づくりを効率化します。</p>
+      <a class="ns-link" href="../../index.html#features">この機能を詳しく見る →</a>
+    </div>
+    <div class="ns-card course">
+      <span class="ns-tag">プロジェクト管理会計研修</span>
+      <h4>中級（第2回）案件種別の採算と、月次締め・システム連携</h4>
+      <p>本コラムに関連するテーマは、プロジェクト管理会計研修で演習を交えて体系的に学べます。</p>
+      <ul><li>BI連携・レポート作成</li></ul>
+      <a class="ns-link" href="../../course/index.html#lv2">中級のカリキュラムを見る →</a>
+    </div>
+    <a class="ns-btn" href="../../course/index.html#cta">プロジェクト管理会計研修（初級・中級・上級 1セット30万円）の詳細・お申込み →</a>
+  </section>
   <div class="related"><h3>関連記事</h3><div class="related-list"><a href="../fpa-management-02/index.html">実務視点から考えるFP&amp;Aの重要性</a><a href="../fpa-management-05/index.html">プロジェクト管理会計 VOL.20「FP&amp;AとCFO組織の最前線」</a></div></div>
   <div class="cta">
     <a href="../../index.html#pricing">eMplex PBM の無料相談・資料請求はこちら →</a>
