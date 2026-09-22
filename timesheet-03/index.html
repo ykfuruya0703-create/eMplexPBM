@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プロジェクト別原価計算における工数管理の実務 | eMplex PBM コラム</title>
+<meta name="description" content="プロジェクト別原価計算の話をすると、多くの人は勘定科目や決算処理といった経理側の論点にばかり注目しますが、実務上もっとも土台となり、しかも一番崩れやすいのは工数管理です。労務費は多くのプロジェクト型ビジネスで原価の中心を占めますが、その労務…">
+<link rel="canonical" href="https://projectkanri.biz/blog/timesheet-03/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="プロジェクト別原価計算における工数管理の実務">
+<meta property="og:description" content="プロジェクト別原価計算の話をすると、多くの人は勘定科目や決算処理といった経理側の論点にばかり注目しますが、実務上もっとも土台となり、しかも一番崩れやすいのは工数管理です。労務費は多くのプロジェクト型ビジネスで原価の中心を占めますが、その労務…">
+<meta property="og:url" content="https://projectkanri.biz/blog/timesheet-03/">
+<meta property="og:site_name" content="eMplex PBM コラム">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="プロジェクト別原価計算における工数管理の実務">
+<meta name="twitter:description" content="プロジェクト別原価計算の話をすると、多くの人は勘定科目や決算処理といった経理側の論点にばかり注目しますが、実務上もっとも土台となり、しかも一番崩れやすいのは工数管理です。労務費は多くのプロジェクト型ビジネスで原価の中心を占めますが、その労務…">
+<style>
+:root{
+  --bg0:#060c14;--bg1:#0a1628;--bg2:#0f2040;
+  --accent:#00d4ff;--accent2:#0090ff;--accent3:#00e8b8;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;
+  --border:rgba(0,212,255,0.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Hiragino Sans','Yu Gothic UI','Noto Sans JP',sans-serif;background:var(--bg0);color:var(--text);line-height:1.85;}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:rgba(6,12,20,.9);position:sticky;top:0;backdrop-filter:blur(10px);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;color:#fff;text-decoration:none;letter-spacing:.5px;font-size:15px}
+.logo span{color:var(--accent)}
+nav a{color:var(--text2);text-decoration:none;font-size:13px;margin-left:18px}
+.breadcrumb{font-size:12px;color:var(--text3);margin:24px 0 8px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.tag-pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px;border:1px solid var(--border);color:var(--accent);background:rgba(0,212,255,.08)}
+.article-date{font-size:12px;color:var(--text3);font-family:monospace;margin-left:10px}
+h1{font-size:26px;font-weight:800;line-height:1.5;margin:14px 0 18px;color:#fff}
+.lead{font-size:15.5px;color:var(--text);background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:28px}
+article h2{font-size:19px;font-weight:700;color:#fff;margin:38px 0 14px;padding-left:12px;border-left:3px solid var(--accent)}
+article p{font-size:15px;color:var(--text2);margin-bottom:18px}
+.related{margin-top:48px;padding-top:28px;border-top:1px solid var(--border)}
+.related h3{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.related-list a{display:block;padding:12px 14px;margin-bottom:8px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:13.5px}
+.related-list a:hover{border-color:var(--accent)}
+.cta{margin-top:36px;padding:22px;text-align:center;border:1px solid var(--border);border-radius:14px;background:rgba(0,212,255,.05)}
+.cta a{color:var(--accent);text-decoration:none;font-weight:700;font-size:13.5px}
+footer{border-top:1px solid var(--border);margin-top:60px;padding:30px 0;text-align:center;color:var(--text3);font-size:12px}
+footer a{color:var(--text3)}
+.back{display:inline-block;margin:20px 0 0;color:var(--text2);text-decoration:none;font-size:13px}
+.nav-new{color:#e2233a;font-weight:800;font-size:.68em;margin-left:3px;vertical-align:2px;letter-spacing:.5px}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "プロジェクト別原価計算における工数管理の実務",
+  "description": "プロジェクト別原価計算の話をすると、多くの人は勘定科目や決算処理といった経理側の論点にばかり注目しますが、実務上もっとも土台となり、しかも一番崩れやすいのは工数管理です。労務費は多くのプロジェクト型ビジネスで原価の中心を占めますが、その労務…",
+  "datePublished": "2026-02-09",
+  "dateModified": "2026-02-09",
+  "author": {
+    "@type": "Person",
+    "name": "古谷幸治"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社プロジェクト・イノベーション",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://projectkanri.biz/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://projectkanri.biz/blog/timesheet-03/"
+  },
+  "articleSection": "タイムシート"
+}
+</script>
+<script type="text/javascript">
+var _trackingid = 'LFT-46372-1';
+
+(function() {
+    var lft = document.createElement('script'); lft.type = 'text/javascript'; lft.async = true;
+    lft.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//track.list-finder.jp/js/ja/track.js';
+    var snode = document.getElementsByTagName('script')[0]; snode.parentNode.insertBefore(lft, snode);
+})();
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html">eMplex<span>PBM</span> コラム</a>
+    <nav><a href="../index.html">コラム一覧</a><a href="../../course/index.html">講座<span class="nav-new">NEW</span></a><a href="../../index.html#pricing">料金プラン</a></nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb"><a href="../../index.html">ホーム</a> / <a href="../index.html">コラム</a> / プロジェクト別原価計算における工数管理の実務</div>
+  <article>
+    <div>
+      <span class="tag-pill">タイムシート</span>
+      <span class="article-date">2026-02-09</span>
+    </div>
+    <h1>プロジェクト別原価計算における工数管理の実務</h1>
+    <div class="lead">プロジェクト別原価計算の話をすると、多くの人は勘定科目や決算処理といった経理側の論点にばかり注目しますが、実務上もっとも土台となり、しかも一番崩れやすいのは工数管理です。労務費は多くのプロジェクト型ビジネスで原価の中心を占めますが、その労務費の元になるデータは、結局のところ社員が日々入力するタイムシートでしかありません。この入り口のデータが粗ければ、その先でどれほど精緻な計算をしても意味を持ちません。この記事では、工数管理を実務としてどう現場に定着させるかを解説していきます。</div>
+<h2>工数データがすべての原価計算の出発点になる</h2>
+<p>プロジェクト別原価計算において、労務費は「予定賃率×工数」という形で算出されるのが一般的です。つまり賃率をどれだけ精緻に設計しても、掛け合わせる工数の数字がいい加減であれば、算出される労務費もいい加減になります。工数管理は原価計算の脇役ではなく、実は最も重要な基礎データの入り口です。この認識が現場に共有されていない会社ほど、タイムシートの入力が形式的な作業として軽視され、結果として原価計算全体の信頼性が損なわれています。</p>
+<h2>直接時間と間接時間を区分して記録する</h2>
+<p>工数管理を設計する際は、特定の案件に直接紐づく直接時間と、社内会議や研修、一般管理業務などの間接時間を明確に区分して記録できる仕組みが必要です。この区分がないと、間接業務の時間まで案件原価に混入してしまい、案件別の採算が実態より悪く見えてしまいます。逆に間接時間の集計自体は、社員一人あたりの間接業務の負荷を把握し、組織全体の生産性を議論する材料としても活用できるため、区分して記録すること自体に独立した価値があります。</p>
+<h2>入力の粒度と入力頻度のバランスを取る</h2>
+<p>工数入力の粒度を15分単位など細かく設定しすぎると、現場の入力負担が大きくなり、結局は月末にまとめて適当に埋めるという形骸化を招きます。逆に週単位でまとめて入力する運用にすると、細かい案件間の按分が曖昧になり、精度が落ちます。多くの現場でバランスが取れているのは、日次で案件単位・半日または一時間単位の粒度で入力する運用です。完璧な精度よりも、無理なく継続できる粒度を選ぶことが、長期的にはデータの質を高めます。</p>
+<h2>稼働率の可視化がプロジェクトマネジメントを変える</h2>
+<p>工数データが蓄積されると、個々のメンバーがどの程度稼働しているか、逆に手が空いているかという稼働率が可視化できるようになります。稼働率が高すぎるメンバーには追加のアサインを避け、低いメンバーには新しい案件を割り振るといった、負荷分散の意思決定を数字に基づいて行えるようになります。この可視化がない組織では、声の大きい人やベテランに仕事が偏り、疲弊による離職やミスの増加という形で、後になって別のコストとして跳ね返ってきます。</p>
+<h2>エンプレックス時代とホリプロ時代のタイムシート運用</h2>
+<p>私はエンプレックスでCFOを務めていた時代、ソフトウェア開発案件のタイムシート運用を設計し、案件コードとの紐づけを徹底することで、月次で案件別損益をリアルタイムに近い形で把握できる体制を作りました。またホリプロでテレビ通販事業という新規事業の立ち上げに携わった際は、既存の芸能マネジメント業務とは全く異なる工数管理の考え方が必要になり、業種が変わっても工数を起点に原価を捉えるという骨格自体は変わらないことを、身をもって確認しました。</p>
+<h2>入力を後回しにさせない運用上の工夫</h2>
+<p>タイムシートの入力が遅れる最大の理由は、入力そのものが後回しにしても誰も困らない作業だと現場に認識されていることです。日次でのリマインド通知、未入力者を上長にも見える形で表示する、月次の締めと連動させて未入力があると経費精算や有給申請が進められないようにするなど、入力を業務フローの一部に組み込む工夫が効果を発揮します。私が支援してきた会社でも、こうした仕組み化によって入力率が大きく改善した事例を数多く見てきました。</p>
+<h2>工数データを評価にそのまま使うことの落とし穴</h2>
+<p>工数データを人事評価に直結させてしまうと、社員が自分の評価を良く見せるために工数を過少申告したり、逆に忙しさをアピールするために過大申告したりする誘因が生まれ、データの信頼性そのものが損なわれます。工数管理はあくまで原価計算とマネジメント判断のための基礎データであるという位置づけを明確にし、評価とは切り離して運用することが、長期的に正確なデータを蓄積し続けるための重要な前提条件になります。</p>
+<h2>まとめ</h2>
+<p>プロジェクト別原価計算の精度は、突き詰めれば日々のタイムシート入力の質でほとんど決まると言っても過言ではありません。どれほど洗練された賃率設計や配賦ロジックを組み上げても、入り口の工数データが歪んでいれば、出てくる数字もまたすべて歪んでしまいます。工数管理とは、社員を監視するための仕組みでは決してなく、組織の実態を正しく映し出すために、日々の小さな記録をこつこつと積み重ね、育てていく静かな営みなのだと私は考えています。</p>
+  </article>
+  <div class="related"><h3>関連記事</h3><div class="related-list"><a href="../cost-accounting-10/index.html">プロジェクト原価計算と予定賃率の仕組み</a><a href="../cost-accounting-12/index.html">プロジェクト別原価計算の適正な実務管理</a></div></div>
+  <div class="cta">
+    <a href="../../index.html#pricing">eMplex PBM の無料相談・資料請求はこちら →</a>
+  </div>
+  <a class="back" href="../index.html">← コラム一覧に戻る</a>
+</div>
+<footer>
+  <div class="wrap">
+    &copy; 2026 株式会社プロジェクト・イノベーション / eMplex PBM
+  </div>
+</footer>
+</body>
+</html>
