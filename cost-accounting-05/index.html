@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プロジェクト管理会計における直接人件費と間接人件費の計算実務 | eMplex PBM コラム</title>
+<meta name="description" content="プロジェクトの原価計算で最も判断に迷うのが、人件費を「直接」と「間接」のどちらに分類するかという問題です。エンジニアやディレクターがプロジェクトに費やした時間は直接人件費として直課できますが、営業や管理部門の人件費、あるいは待機時間や研修時…">
+<link rel="canonical" href="https://projectkanri.biz/blog/cost-accounting-05/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="プロジェクト管理会計における直接人件費と間接人件費の計算実務">
+<meta property="og:description" content="プロジェクトの原価計算で最も判断に迷うのが、人件費を「直接」と「間接」のどちらに分類するかという問題です。エンジニアやディレクターがプロジェクトに費やした時間は直接人件費として直課できますが、営業や管理部門の人件費、あるいは待機時間や研修時…">
+<meta property="og:url" content="https://projectkanri.biz/blog/cost-accounting-05/">
+<meta property="og:site_name" content="eMplex PBM コラム">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="プロジェクト管理会計における直接人件費と間接人件費の計算実務">
+<meta name="twitter:description" content="プロジェクトの原価計算で最も判断に迷うのが、人件費を「直接」と「間接」のどちらに分類するかという問題です。エンジニアやディレクターがプロジェクトに費やした時間は直接人件費として直課できますが、営業や管理部門の人件費、あるいは待機時間や研修時…">
+<style>
+:root{
+  --bg0:#060c14;--bg1:#0a1628;--bg2:#0f2040;
+  --accent:#00d4ff;--accent2:#0090ff;--accent3:#00e8b8;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;
+  --border:rgba(0,212,255,0.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Hiragino Sans','Yu Gothic UI','Noto Sans JP',sans-serif;background:var(--bg0);color:var(--text);line-height:1.85;}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:rgba(6,12,20,.9);position:sticky;top:0;backdrop-filter:blur(10px);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;color:#fff;text-decoration:none;letter-spacing:.5px;font-size:15px}
+.logo span{color:var(--accent)}
+nav a{color:var(--text2);text-decoration:none;font-size:13px;margin-left:18px}
+.breadcrumb{font-size:12px;color:var(--text3);margin:24px 0 8px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.tag-pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px;border:1px solid var(--border);color:var(--accent);background:rgba(0,212,255,.08)}
+.article-date{font-size:12px;color:var(--text3);font-family:monospace;margin-left:10px}
+h1{font-size:26px;font-weight:800;line-height:1.5;margin:14px 0 18px;color:#fff}
+.lead{font-size:15.5px;color:var(--text);background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:28px}
+article h2{font-size:19px;font-weight:700;color:#fff;margin:38px 0 14px;padding-left:12px;border-left:3px solid var(--accent)}
+article p{font-size:15px;color:var(--text2);margin-bottom:18px}
+.related{margin-top:48px;padding-top:28px;border-top:1px solid var(--border)}
+.related h3{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.related-list a{display:block;padding:12px 14px;margin-bottom:8px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:13.5px}
+.related-list a:hover{border-color:var(--accent)}
+.cta{margin-top:36px;padding:22px;text-align:center;border:1px solid var(--border);border-radius:14px;background:rgba(0,212,255,.05)}
+.cta a{color:var(--accent);text-decoration:none;font-weight:700;font-size:13.5px}
+footer{border-top:1px solid var(--border);margin-top:60px;padding:30px 0;text-align:center;color:var(--text3);font-size:12px}
+footer a{color:var(--text3)}
+.back{display:inline-block;margin:20px 0 0;color:var(--text2);text-decoration:none;font-size:13px}
+.nav-new{color:#e2233a;font-weight:800;font-size:.68em;margin-left:3px;vertical-align:2px;letter-spacing:.5px}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "プロジェクト管理会計における直接人件費と間接人件費の計算実務",
+  "description": "プロジェクトの原価計算で最も判断に迷うのが、人件費を「直接」と「間接」のどちらに分類するかという問題です。エンジニアやディレクターがプロジェクトに費やした時間は直接人件費として直課できますが、営業や管理部門の人件費、あるいは待機時間や研修時…",
+  "datePublished": "2026-02-27",
+  "dateModified": "2026-02-27",
+  "author": {
+    "@type": "Person",
+    "name": "古谷幸治"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社プロジェクト・イノベーション",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://projectkanri.biz/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://projectkanri.biz/blog/cost-accounting-05/"
+  },
+  "articleSection": "原価計算実務"
+}
+</script>
+<script type="text/javascript">
+var _trackingid = 'LFT-46372-1';
+
+(function() {
+    var lft = document.createElement('script'); lft.type = 'text/javascript'; lft.async = true;
+    lft.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//track.list-finder.jp/js/ja/track.js';
+    var snode = document.getElementsByTagName('script')[0]; snode.parentNode.insertBefore(lft, snode);
+})();
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html">eMplex<span>PBM</span> コラム</a>
+    <nav><a href="../index.html">コラム一覧</a><a href="../../course/index.html">講座<span class="nav-new">NEW</span></a><a href="../../index.html#pricing">料金プラン</a></nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb"><a href="../../index.html">ホーム</a> / <a href="../index.html">コラム</a> / プロジェクト管理会計における直接人件費と間接人件費の計算実務</div>
+  <article>
+    <div>
+      <span class="tag-pill">原価計算実務</span>
+      <span class="article-date">2026-02-27</span>
+    </div>
+    <h1>プロジェクト管理会計における直接人件費と間接人件費の計算実務</h1>
+    <div class="lead">プロジェクトの原価計算で最も判断に迷うのが、人件費を「直接」と「間接」のどちらに分類するかという問題です。エンジニアやディレクターがプロジェクトに費やした時間は直接人件費として直課できますが、営業や管理部門の人件費、あるいは待機時間や研修時間の扱いは会社によって基準がまちまちです。この線引きが曖昧なままでは、プロジェクト別の原価も、時間単価の算定も精度を欠いたものになってしまいます。本記事では、直接人件費と間接人件費の考え方と、実務上の計算方法を整理します。</div>
+<h2>直接人件費と間接人件費の基本的な違い</h2>
+<p>結論として、直接人件費とは特定のプロジェクトの遂行に直接従事した時間に対応する人件費であり、間接人件費とは複数のプロジェクトに共通してかかる、あるいはプロジェクト以外の業務にかかる人件費です。この区分がなければ、プロジェクトごとの原価に個々の従業員のコストをどう配分すべきかという根本的な基準が定まらないためです。エンジニアが特定の開発案件に費やした稼働時間は直接人件費として当該プロジェクトに直課し、営業部門や経理部門の人件費は間接人件費として配賦基準に基づき各プロジェクトに配分します。まずこの二分類を組織全体で統一的に運用することが、原価計算の出発点になります。</p>
+<h2>直接人件費の算定——時間単価をどう作るか</h2>
+<p>結論として、直接人件費は「時間単価×投入時間」で算定するのが基本ですが、時間単価そのものの設計に注意が必要です。単純に給与額を稼働時間で割るだけでは、賞与や社会保険料、福利厚生費といった付随コストが漏れ、実際のコストを過小評価してしまうためです。従業員の年間人件費の合計を年間の標準稼働時間で割ることで、フルコストベースの時間単価を算定し、これにプロジェクトへの投入時間を掛け合わせて直接人件費を計算する方法が一般的です。時間単価はフルコストで設計しなければ、プロジェクトの実質的な採算を正しく把握できません。</p>
+<h2>間接人件費の配賦——どの基準で按分するか</h2>
+<p>結論として、間接人件費の配賦基準としては、直接人件費の額を基準とする方法や、プロジェクトの投入時間を基準とする方法が代表的です。管理部門や営業部門の人件費は個々のプロジェクトに直接紐づかないため、何らかの合理的な基準で按分する必要があるためです。年間の管理部門人件費の総額を、全プロジェクトの直接人件費の合計額で割って配賦率を算出し、各プロジェクトの直接人件費にその配賦率を掛けることで間接人件費を配分する方法がよく用いられます。配賦基準は一度決めたら固定するのではなく、事業構造の変化に応じて定期的に見直すことが望ましいといえます。</p>
+<h2>待機時間・研修時間はどちらに分類すべきか</h2>
+<p>結論として、プロジェクトに従事していない待機時間や、業務外の研修時間は、原則として間接人件費として扱うべきです。これらの時間は特定のプロジェクトの遂行に直接貢献していないため、直接人件費に含めるとプロジェクト原価を実態以上に増減させてしまうためです。繁忙期の谷間で発生した待機時間を、たまたま次に着手するプロジェクトの直接人件費に含めてしまうと、そのプロジェクトの原価率が不当に悪化して見えることがあります。待機時間や研修時間は共通コストとして間接人件費のプールに含め、全体の稼働率として別途モニタリングする方が実態に即しています。</p>
+<h2>直接・間接の線引きが曖昧だとどんな問題が起きるか</h2>
+<p>結論として、直接・間接の線引きがプロジェクトや担当者ごとに異なると、プロジェクト間の採算比較そのものが意味を失います。ある部署では研修時間を直接人件費に含め、別の部署では間接人件費に含めるといった運用のばらつきがあると、見かけ上の原価率の差が実力の差なのか会計処理の差なのか判別できなくなるためです。同じような規模の二つのプロジェクトで、一方は待機時間を直接人件費に計上し、もう一方は間接人件費に計上した結果、原価率に5ポイント以上の差が生じ、経営会議で誤った評価が下されそうになった事例がありました。分類基準を全社で統一し、マニュアル化しておくことが不可欠です。</p>
+<h2>実体験——複数業種を経験して見えた人件費配賦の違い</h2>
+<p>エンプレックス時代、映像制作業とソフトウェア開発業という性質の異なる二つの事業の経営管理を同時に担当していましたが、人件費の直接・間接の考え方が業種によって大きく異なることに驚かされました。映像制作では撮影クルーの拘束時間がほぼそのまま直接人件費になる一方、ソフトウェア開発では要件定義や社内会議など、直接・間接の境界があいまいな時間が多く発生します。この経験から、業種特性に応じて直接人件費の範囲をあらかじめ定義しておくことの重要性を学びました。</p>
+<h2>eMplex PBMによる人件費配賦の自動化</h2>
+<p>結論として、直接人件費と間接人件費の計算は、タイムシートデータと人件費マスタを連動させることで自動化できます。手作業での按分計算は月次決算のたびに時間がかかるうえ、担当者によって計算方法にぶれが生じやすいためです。eMplex PBMでは、タイムシートで記録されたプロジェクト別の投入時間と、従業員ごとのフルコスト時間単価を掛け合わせて直接人件費を自動計算し、間接人件費についてもあらかじめ設定した配賦基準に基づいて自動配分する仕組みを備えています。計算ロジックをシステムに組み込むことで、属人的なばらつきのない安定した原価計算が可能になります。</p>
+<h2>まとめ</h2>
+<p>直接人件費と間接人件費の線引きは、地味ながらプロジェクト原価計算の精度を左右する重要な論点です。フルコストでの時間単価設計と、合理的な配賦基準の統一があって初めて、プロジェクト間の採算比較に意味が生まれます。人件費は、配るものではなく、実態に合わせて設計するものだと考えることが出発点になります。</p>
+  </article>
+  <div class="related"><h3>関連記事</h3><div class="related-list"><a href="../timesheet-02/index.html">プロジェクト管理会計における作業日報の承認手続と内部統制の仕組み</a><a href="../cost-accounting-07/index.html">月次決算における人件費と未払費用の計上実務</a></div></div>
+  <div class="cta">
+    <a href="../../index.html#pricing">eMplex PBM の無料相談・資料請求はこちら →</a>
+  </div>
+  <a class="back" href="../index.html">← コラム一覧に戻る</a>
+</div>
+<footer>
+  <div class="wrap">
+    &copy; 2026 株式会社プロジェクト・イノベーション / eMplex PBM
+  </div>
+</footer>
+</body>
+</html>

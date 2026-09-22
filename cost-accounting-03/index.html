@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プロジェクト別原価計算における特別損失の分類と処理方式 | eMplex PBM コラム</title>
+<meta name="description" content="プロジェクト別に原価計算を行っていると、まれに発生する大きな損失をどう扱うべきか迷う場面に必ず出会います。減損損失や訴訟に伴う損害賠償、災害による設備損壊など、頻繁には起きないものの金額の大きい支出を、そのままプロジェクト原価に含めてしまう…">
+<link rel="canonical" href="https://projectkanri.biz/blog/cost-accounting-03/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="プロジェクト別原価計算における特別損失の分類と処理方式">
+<meta property="og:description" content="プロジェクト別に原価計算を行っていると、まれに発生する大きな損失をどう扱うべきか迷う場面に必ず出会います。減損損失や訴訟に伴う損害賠償、災害による設備損壊など、頻繁には起きないものの金額の大きい支出を、そのままプロジェクト原価に含めてしまう…">
+<meta property="og:url" content="https://projectkanri.biz/blog/cost-accounting-03/">
+<meta property="og:site_name" content="eMplex PBM コラム">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="プロジェクト別原価計算における特別損失の分類と処理方式">
+<meta name="twitter:description" content="プロジェクト別に原価計算を行っていると、まれに発生する大きな損失をどう扱うべきか迷う場面に必ず出会います。減損損失や訴訟に伴う損害賠償、災害による設備損壊など、頻繁には起きないものの金額の大きい支出を、そのままプロジェクト原価に含めてしまう…">
+<style>
+:root{
+  --bg0:#060c14;--bg1:#0a1628;--bg2:#0f2040;
+  --accent:#00d4ff;--accent2:#0090ff;--accent3:#00e8b8;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;
+  --border:rgba(0,212,255,0.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Hiragino Sans','Yu Gothic UI','Noto Sans JP',sans-serif;background:var(--bg0);color:var(--text);line-height:1.85;}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border);padding:16px 0;background:rgba(6,12,20,.9);position:sticky;top:0;backdrop-filter:blur(10px);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;color:#fff;text-decoration:none;letter-spacing:.5px;font-size:15px}
+.logo span{color:var(--accent)}
+nav a{color:var(--text2);text-decoration:none;font-size:13px;margin-left:18px}
+.breadcrumb{font-size:12px;color:var(--text3);margin:24px 0 8px}
+.breadcrumb a{color:var(--text3);text-decoration:none}
+.tag-pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px;border:1px solid var(--border);color:var(--accent);background:rgba(0,212,255,.08)}
+.article-date{font-size:12px;color:var(--text3);font-family:monospace;margin-left:10px}
+h1{font-size:26px;font-weight:800;line-height:1.5;margin:14px 0 18px;color:#fff}
+.lead{font-size:15.5px;color:var(--text);background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:28px}
+article h2{font-size:19px;font-weight:700;color:#fff;margin:38px 0 14px;padding-left:12px;border-left:3px solid var(--accent)}
+article p{font-size:15px;color:var(--text2);margin-bottom:18px}
+.related{margin-top:48px;padding-top:28px;border-top:1px solid var(--border)}
+.related h3{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.related-list a{display:block;padding:12px 14px;margin-bottom:8px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:13.5px}
+.related-list a:hover{border-color:var(--accent)}
+.cta{margin-top:36px;padding:22px;text-align:center;border:1px solid var(--border);border-radius:14px;background:rgba(0,212,255,.05)}
+.cta a{color:var(--accent);text-decoration:none;font-weight:700;font-size:13.5px}
+footer{border-top:1px solid var(--border);margin-top:60px;padding:30px 0;text-align:center;color:var(--text3);font-size:12px}
+footer a{color:var(--text3)}
+.back{display:inline-block;margin:20px 0 0;color:var(--text2);text-decoration:none;font-size:13px}
+.nav-new{color:#e2233a;font-weight:800;font-size:.68em;margin-left:3px;vertical-align:2px;letter-spacing:.5px}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "プロジェクト別原価計算における特別損失の分類と処理方式",
+  "description": "プロジェクト別に原価計算を行っていると、まれに発生する大きな損失をどう扱うべきか迷う場面に必ず出会います。減損損失や訴訟に伴う損害賠償、災害による設備損壊など、頻繁には起きないものの金額の大きい支出を、そのままプロジェクト原価に含めてしまう…",
+  "datePublished": "2026-03-04",
+  "dateModified": "2026-03-04",
+  "author": {
+    "@type": "Person",
+    "name": "古谷幸治"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社プロジェクト・イノベーション",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://projectkanri.biz/assets/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://projectkanri.biz/blog/cost-accounting-03/"
+  },
+  "articleSection": "原価計算実務"
+}
+</script>
+<script type="text/javascript">
+var _trackingid = 'LFT-46372-1';
+
+(function() {
+    var lft = document.createElement('script'); lft.type = 'text/javascript'; lft.async = true;
+    lft.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//track.list-finder.jp/js/ja/track.js';
+    var snode = document.getElementsByTagName('script')[0]; snode.parentNode.insertBefore(lft, snode);
+})();
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html">eMplex<span>PBM</span> コラム</a>
+    <nav><a href="../index.html">コラム一覧</a><a href="../../course/index.html">講座<span class="nav-new">NEW</span></a><a href="../../index.html#pricing">料金プラン</a></nav>
+  </div>
+</header>
+<div class="wrap">
+  <div class="breadcrumb"><a href="../../index.html">ホーム</a> / <a href="../index.html">コラム</a> / プロジェクト別原価計算における特別損失の分類と処理方式</div>
+  <article>
+    <div>
+      <span class="tag-pill">原価計算実務</span>
+      <span class="article-date">2026-03-04</span>
+    </div>
+    <h1>プロジェクト別原価計算における特別損失の分類と処理方式</h1>
+    <div class="lead">プロジェクト別に原価計算を行っていると、まれに発生する大きな損失をどう扱うべきか迷う場面に必ず出会います。減損損失や訴訟に伴う損害賠償、災害による設備損壊など、頻繁には起きないものの金額の大きい支出を、そのままプロジェクト原価に含めてしまうと、月次の採算管理が一気に信頼を失います。特別損失は本来、経常的な事業活動の成果とは切り離して評価すべきものです。本記事では、プロジェクト別原価計算における特別損失の分類方法と、実務上の処理方式を具体的に解説します。</div>
+<h2>特別損失とは何か——経常的な損益と切り離す理由</h2>
+<p>結論として、特別損失とは臨時的かつ多額に発生する損失のことで、プロジェクトの通常の遂行能力とは無関係に発生するものです。損益計算書上、経常損益と特別損益を区分するのは、企業やプロジェクトの地力を正しく評価するためであり、たまたま発生した一過性の損失を混ぜてしまうと経常的な収益力の判断を誤らせるからです。固定資産の売却損、減損損失、災害による損失、訴訟の敗訴に伴う損害賠償金などが典型的な特別損失にあたります。プロジェクト別原価計算でも同様に、これらの臨時的な損失は個別プロジェクトの原価とは分離して扱う必要があります。</p>
+<h2>プロジェクト別原価計算に特別損失を混入させるとどうなるか</h2>
+<p>結論として、特別損失を個別プロジェクトの原価に含めてしまうと、そのプロジェクトの月次採算が実態とかけ離れた形で悪化して見えます。特別損失は多くの場合、プロジェクトの実行体制やマネジメントの巧拙とは関係なく発生するため、これを原価に含めると評価指標としての意味を失うからです。あるプロジェクトで使用していた専用設備が減損処理の対象になった際、その減損損失をそのままプロジェクト原価に計上した結果、優秀なプロジェクトマネージャーが担当する案件が大赤字と判定されてしまった、という相談を受けたことがあります。特別損失は原価計算の枠外で管理し、必要に応じて注記として開示する方式が望ましいといえます。</p>
+<h2>特別損失の分類——臨時性・多額性・偶発性の三つの視点</h2>
+<p>結論として、特別損失に分類すべきかどうかは、臨時性・多額性・偶発性という三つの視点で判断します。これらの要素がそろって初めて、経常的な原価計算のルールから外して個別に扱う合理性が生まれるためです。毎期発生する少額の設備除却損は原価計算上の通常の処理で足りますが、金額が大きく発生頻度も低い設備の減損や、天災による損害は特別損失として区分すべきです。訴訟による損害賠償金も、係争の性質と金額次第で特別損失に分類されることが一般的です。三つの視点を社内基準として明文化しておくことで、担当者ごとの判断のばらつきを防げます。</p>
+<h2>特別損失の処理方式——原価台帳から切り離す実務フロー</h2>
+<p>結論として、特別損失は勘定科目の段階で「特別損失」区分を設け、プロジェクト別原価計算の集計対象から除外する処理フローを構築することが実務上有効です。集計後に手作業で特別損失を除く方式では、月次決算のたびに調整作業が発生し、ミスや漏れが起きやすくなるためです。勘定科目マスタに「原価」「販管費」「特別損失」の区分フラグを持たせ、プロジェクト別損益の集計ロジックが特別損失を自動的に除外するように設計しておけば、担当者の判断を介さずに正確な採算を把握できます。仕組みで切り分けることが、属人化を防ぐ最も確実な方法です。</p>
+<h2>実体験——ホリプロ時代に見た特別損失の開示判断</h2>
+<p>私がホリプロで経営企画責任者を務めていた際、子会社の一つで発生した契約解除に伴う違約金の会計処理をめぐり、経常損益とすべきか特別損失とすべきかの判断が社内で分かれたことがありました。上場会社の開示業務に携わる立場として、金額の大きさだけでなく、その損失が事業の通常の一部として繰り返し起こりうるものかどうかを丁寧に検討する必要があると痛感した経験です。この視点は、個別プロジェクトの原価計算における特別損失の分類にもそのまま応用できます。</p>
+<h2>eMplex PBMにおける特別損失の管理設計</h2>
+<p>結論として、プロジェクト管理システムには、特別損失を記録しつつもプロジェクト別採算の集計からは除外できる仕組みが必要です。特別損失を完全に記録から消してしまうと、後から経営会議で説明を求められた際に根拠を示せなくなるためです。eMplex PBMでは、特別損失に該当する支出をプロジェクトに紐付けて記録しつつ、標準の損益レポートでは非表示にし、詳細レポートでのみ確認できるという二段階の表示方式を採用しています。記録と集計を分離することで、透明性と採算管理の正確性を両立させています。</p>
+<h2>まとめ</h2>
+<p>特別損失をプロジェクト原価に混ぜてしまうと、優秀なプロジェクトも一夜にして赤字案件に見えてしまいます。臨時性・多額性・偶発性という基準で丁寧に切り分け、記録は残しつつ集計からは外すという二段構えの管理が実務の鍵になります。特別損失は、隠すものではなく、正しい場所に置くものだと考えるべきでしょう。</p>
+  </article>
+  <div class="related"><h3>関連記事</h3><div class="related-list"><a href="../cost-accounting-01/index.html">プロジェクト型ビジネスのための非原価項目の定義と算定基準</a><a href="../cost-accounting-04/index.html">棚卸資産評価損と受注損失引当金の計上統制</a></div></div>
+  <div class="cta">
+    <a href="../../index.html#pricing">eMplex PBM の無料相談・資料請求はこちら →</a>
+  </div>
+  <a class="back" href="../index.html">← コラム一覧に戻る</a>
+</div>
+<footer>
+  <div class="wrap">
+    &copy; 2026 株式会社プロジェクト・イノベーション / eMplex PBM
+  </div>
+</footer>
+</body>
+</html>

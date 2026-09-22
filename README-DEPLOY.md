@@ -12,8 +12,6 @@
 - `index.html` … トップページ
 - `blog/index.html` … コラム一覧ページ（全86記事）
 - `blog/{slug}/index.html` … 記事ごとの独立ページ（例: `/blog/forecast-management-01/index.html`）
-- `course/index.html` … プロジェクト管理会計研修（初級・中級・上級／リアル・オンライン）のLP
-- `assets/furuya.jpg` … 講師写真（研修LPで使用）
 - `sitemap.xml`
 - `robots.txt`
 
@@ -49,9 +47,3 @@ index.htmlなし）のクリーンなURL形式を使っています。一般的�
 ## 動作確認方法
 `site/index.html` をダブルクリックして開き、コラムのカードやタイトルをクリックして
 記事ページ（例: `blog/forecast-management-01/index.html`）に遷移することを確認してください。
-
-
-## 研修LP（course/）で確認・修正してほしい点
-- 開催日程は「日程調整中」の表記です。決まり次第 `#price` セクションを更新してください。
-- 会場・修了証・振替対応などの記載は仮置きです。実運用に合わせて修正してください。
-- フォーム送信先は既存トップページと同じ FormSubmit を流用しています。
