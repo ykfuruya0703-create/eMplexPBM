@@ -369,6 +369,7 @@ footer{background:rgba(2,5,12,0.9);border-top:1px solid var(--border);padding:48
       <a href="#curriculum">カリキュラム</a>
       <a href="#format">リアル/オンライン</a>
       <a href="#price">日程・料金</a>
+      <a href="#admin">スーパーアドミニ講座</a>
       <a href="#instructor">講師</a>
       <a href="#faq">よくある質問</a>
     </nav>
@@ -702,6 +703,44 @@ footer{background:rgba(2,5,12,0.9);border-top:1px solid var(--border);padding:48
   </div>
 </section>
 
+<!-- SUPER ADMIN -->
+<section id="admin">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-badge"><span class="tag-pill tag-cyan">New Course &amp; Certification</span></div>
+      <h2 class="section-title">併設講座：プロジェクト管理会計<br>スーパーアドミニストレーター養成講座・認定制度</h2>
+      <p class="section-desc">プロジェクト管理会計の仕組みを、毎月・期日どおり・正確に回し続けるキーマンを育てる、独自ノウハウのオリジナル講座です。研修が「何を、なぜ管理するのか」を学ぶ場なら、養成講座は「それを毎月どう確実に回すのか」を学ぶ場。初級・中級・上級の3レベルと、レベルごとの認定制度で構成します。</p>
+    </div>
+    <div class="sched-grid">
+      <div class="sched">
+        <h4>📘 初級｜土台をつくる</h4>
+        <p style="font-size:14px;line-height:1.8;margin-top:8px">役割と心構え、プロジェクト管理会計の基本、プロジェクトコードの付番、予算書の発行、実績データの集め方と締めの手順</p>
+        <p style="font-size:13px;margin-top:10px;opacity:.85">認定要件（予定）：修了＋確認テスト</p>
+      </div>
+      <div class="sched">
+        <h4>📗 中級｜月次を回す</h4>
+        <p style="font-size:14px;line-height:1.8;margin-top:8px">証票と数字の照合、予算・実績・予想、フォーキャストの取りまとめ、赤字の兆候の報告、受注損失引当金の判断材料、監査対応、PMとのコミュニケーション演習</p>
+        <p style="font-size:13px;margin-top:10px;opacity:.85">認定要件（予定）：修了＋実務課題＋実務経験</p>
+      </div>
+      <div class="sched">
+        <h4>📙 上級｜仕組みにする</h4>
+        <p style="font-size:14px;line-height:1.8;margin-top:8px">あるべき組織とポジション、ルール・手順書、システム・グループウェアの設計、FP&amp;A・経営企画との連携、育成計画、自社の運用設計案の発表</p>
+        <p style="font-size:13px;margin-top:10px;opacity:.85">認定要件（予定）：修了＋最終課題の発表＋実務経験</p>
+      </div>
+    </div>
+    <div class="price-side" style="margin-top:28px">
+      <div class="price-box">
+        <h4>プロジェクト管理会計スーパーアドミニストレーター認定制度</h4>
+        <p>講座の修了に加え、確認テスト・実務課題・最終発表を通じて知識と実務の力を確認し、初級・中級・上級の認定証を発行します（予定）。社内の等級・配置・昇格の判断にもご活用いただけます。当社独自の民間の認定であり、国家資格・公的資格ではありません。</p>
+      </div>
+      <div class="price-box">
+        <h4>日程・受講料・お申込み</h4>
+        <p>開催日程・受講形式・受講料・認定の要件や有効期間などの詳細は、決まり次第ご案内します。ご関心のある方は、下記フォームの「ご希望の講座」で「スーパーアドミニストレーター養成講座」をお選びのうえ、お問い合わせください。講座の考え方は<a href="../blog/hr-management-14/index.html" style="color:var(--cyan,#00d4ff)">コラム「プロジェクト管理会計スーパーアドミニストレーター養成講座」</a>で詳しくご紹介しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- INSTRUCTOR -->
 <section id="instructor">
   <div class="container">
@@ -780,6 +819,13 @@ footer{background:rgba(2,5,12,0.9);border-top:1px solid var(--border);padding:48
         <input type="text" name="company" placeholder="会社名・部署" autocomplete="organization">
       </div>
       <input type="email" name="email" placeholder="メールアドレス" autocomplete="email" required style="margin-bottom:10px">
+      <label class="lf-l" for="crs">ご希望の講座</label>
+      <select id="crs" name="course" style="margin-bottom:10px">
+        <option value="プロジェクト管理会計研修">プロジェクト管理会計研修</option>
+        <option value="スーパーアドミニストレーター養成講座">スーパーアドミニストレーター養成講座（認定制度）</option>
+        <option value="両方">両方</option>
+        <option value="未定・相談したい">未定・相談したい</option>
+      </select>
       <div class="lf-row">
         <div>
           <label class="lf-l" for="fmt">ご希望の受講形式</label>
